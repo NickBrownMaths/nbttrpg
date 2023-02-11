@@ -1,0 +1,219 @@
+/*Colour Defs*/
+:root {
+  --colour1: #041C32;
+  --colour2: #04293A;
+  --colour3: #064663;
+  --colour4: #ECB365;
+}
+
+/*Standard things*/
+body {
+  background-color: var(--colour1);
+  overflow-y: scroll;
+}
+.App {
+  margin: auto;
+  text-align: center;
+  font-family: 'Consolas';
+}
+
+/*Controls*/ 
+.NameSubmit,
+.NameInput,
+.LoadSubmit {
+  border-radius: 5px;
+  font-size: x-large;
+  font-family: consolas;
+  text-align: center;
+  border-color: black;
+  min-height: 60px;
+  min-width: 60px;
+  margin: 5px
+}
+.LoadInput {
+  word-wrap: break-word;
+  border-radius: 10px;
+  font-size: medium;
+  font-family: consolas;
+  text-align: center;
+  border-color: black;
+  min-height: 600px;
+  min-width: 400px;
+  margin: 5px
+}
+.NavBar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+
+}
+.NavButton {
+  font-family: 'Consolas';
+  font-size: large;
+  background-color: var(--colour3);
+  border-radius: 12px;
+  min-height: 40px;
+  border-color: black;
+  color: var(--colour4);
+
+  min-width: 150px;
+  max-width: 150px;
+  min-height: 50px;
+  max-height: 50px;
+  margin: 5px;
+}
+.NavButton:hover,
+.StatButton:hover,
+.LevelUpButton:hover {
+  background-color: var(--colour2);
+}
+
+/*Centred boxes with colour2*/
+.HeroBar,
+.InstructionBox {
+  justify-content: center;
+  align-content: center;
+  display: inline-block;
+  margin: 10px;
+  border-radius: 12px;
+  border-color: black;
+  background-color: var(--colour2);
+  border-style: solid;
+}
+.InstructionBox {
+  color: var(--colour4);
+  word-wrap: break-word;
+  min-height: 40px;
+  min-width: 600px;
+  max-width: 800px;
+}
+.InstructionHolder {
+  display: block;
+  flex-direction: column;
+}
+
+/*Statbox Holders*/
+.StatButton {
+  margin: 10px;
+  border-radius: 12px;
+  border-color: black;
+  background-color: var(--colour3);
+  border-style: solid;
+}
+.Statbar {
+  margin: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+
+  border-radius: 12px;
+  min-height: 75px;
+
+  border-color: black;
+  color: black;
+  border-style: solid;
+
+  background-color: var(--colour1);
+
+}
+.GridHolder {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: row;
+}
+.GridBase {
+  display: grid;
+  column-gap: 5px;
+  row-gap: 5px;
+  grid-template-columns: 95px 95px 95px 95px 95px 95px 95px 95px 95px 95px;
+
+  padding: 5px;
+
+  border-style: solid;
+  border-radius: 12px;
+  border-color: black;
+  background-color: var(--colour2);
+}
+
+/*Statboxes*/
+.NameBox,
+.GearNameBox,
+.Statbox,
+.StatboxZero,
+.LevelUpButton {
+  font-family: 'Consolas';
+  margin: 2px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  font-size: small;
+  min-height: 40px;
+  color: black;
+
+  border-style: solid;
+  border-radius: 12px;
+  border-color: black;
+
+  background-color: var(--colour4);
+
+}
+.Statbox,
+.StatboxZero,
+.LevelUpButton,
+.InterBox,
+.InterBoxAxis {
+  min-width: 90px;
+  max-width: 90px;
+  min-height: 60px;
+  max-height: 60px;
+  border-radius: 12px;
+  border-color: black;
+}
+.StatboxZero {
+  background-color: var(--colour2);
+  color: var(--colour2);
+}
+.InterBox,
+.InterBoxAxis {
+  border-style: solid;
+  border-radius: 12px;
+  border-color: black;
+
+  color: var(--colour4);
+  background-color: var(--colour3);
+}
+
+.InterBoxAxis {
+  color: black;
+  background-color: #ECB365;
+}
+.stat {
+  font-size: xx-large;
+}
+.statLabel {
+  font-size: small;
+}
+.NameBox,
+.GearNameBox {
+  font-size: large;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+}
+.NameBox {
+  min-width: 410px;
+  max-width: 410px;
+}
+.GearNameBox {
+  min-width: 620px;
+  max-width: 620px;
+}
+
+
+
+
