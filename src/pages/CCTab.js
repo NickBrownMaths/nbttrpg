@@ -1,9 +1,9 @@
 import { AllStats } from "../Utils/AllData";
 
 import StatCard from "../components/StatCard";
-import GearButton from "../components/GearButton";
 import CharacterNameForm from "../components/CharacterNameForm";
 import InteractionGrid from "../components/InteractionGrid";
+import LevelUp from "./LevelUp";
 
 function CCTab(props) {
   let allstats = new AllStats();
@@ -91,6 +91,13 @@ function CCTab(props) {
         <InteractionGrid statblock={props.statblock} />
       </div>
     )
+  }
+  else if (props.currentTab === 'LU') {
+    return <LevelUp
+      statblock={props.statblock}
+
+      setLevelUpMessage={props.setLevelUpMessage}
+    />
   }
   else {
     return (
