@@ -13,22 +13,18 @@ function LevelUp(props) {
       />
       <div className="Statbar">
         {
-          Object.keys(props.statblock.STAT).map((key, index) => (
-            <LevelUpButton index={index} statlabel={key} setLevelUpMessage={props.setLevelUpMessage} statType={'STAT'} />
+          Object.keys(props.statblock.STAT).map((objKey, index) => (
+            <LevelUpButton key={index} statlabel={objKey} setLevelUpMessage={props.setLevelUpMessage} statType={'STAT'} />
           ))
         }
-      </div>
-      <div className="Statbar">
         {
-          Object.keys(props.statblock.ELMT).map((key, index) => (
-            <LevelUpButton index={index} statlabel={key} setLevelUpMessage={props.setLevelUpMessage} statType={'ELMT'} />
+          Object.keys(props.statblock.ELMT).map((objKey, index) => (
+            <LevelUpButton key={index} statlabel={objKey} setLevelUpMessage={props.setLevelUpMessage} statType={'ELMT'} />
           ))
         }
-      </div>
-      <div className="Statbar">
         {
-          Object.keys(props.statblock.TRNG).map((key, index) => (
-            <LevelUpButton index={index} statlabel={key} setLevelUpMessage={props.setLevelUpMessage} statType={'TRNG'} />
+          Object.keys(props.statblock.TRNG).map((objKey, index) => (
+            <LevelUpButton key={index} statlabel={objKey} setLevelUpMessage={props.setLevelUpMessage} statType={'TRNG'} />
           ))
         }
       </div>

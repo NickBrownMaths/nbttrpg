@@ -38,7 +38,7 @@ function InteractionGrid(props) {
       <InteractionGridBox isAxis={0} number={getStatInteraction(props.statblock.STAT.per, props.statblock.TRNG.crafting) } label={'jewellry'} />
       <InteractionGridBox isAxis={0} number={getStatInteraction(props.statblock.STAT.int, props.statblock.TRNG.crafting) } label={'clockwork'} />
       <InteractionGridBox isAxis={0} number={getStatInteraction(props.statblock.STAT.wis, props.statblock.TRNG.crafting) } label={'tailoring'} />
-      <InteractionGridBox isAxis={0} number={getStatInteraction(props.statblock.STAT.cha, props.statblock.TRNG.crafting) } label={''} />
+      <InteractionGridBox isAxis={0} number={getStatInteraction(props.statblock.STAT.cha, props.statblock.TRNG.crafting) } label={'cookery'} />
       <InteractionGridBox isAxis={1} number={props.statblock.TRNG.performing} label={'performing'} />
       <InteractionGridBox isAxis={0} number={getStatInteraction(props.statblock.STAT.str, props.statblock.TRNG.performing) } label={''} />
       <InteractionGridBox isAxis={0} number={getStatInteraction(props.statblock.STAT.con, props.statblock.TRNG.performing) } label={''} />

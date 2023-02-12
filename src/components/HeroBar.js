@@ -1,44 +1,37 @@
 import Statbox from "./Statbox";
-import InteractionGrid from "./InteractionGrid";
 
 function HeroBar(props) {
   return (
-    <div className="HeroBar">
+    <div className="SubDivsInCol Card ColourMid">
       <div className="NameBox"> {props.name + " (level " + props.level + ")"} </div>
-      <div className="Statbar">
-        {
-          Object.keys(props.statblock.STAT).map((key, index) => (
-            <Statbox index={index} stat={props.statblock.STAT[key]} statlabel={key} />
-          ))
-        }
-      </div>
-      <div className="Statbar">
-        {
-          Object.keys(props.statblock.ELMT).map((key, index) => (
-            <Statbox index={index} stat={props.statblock.ELMT[key]} statlabel={key} />
-          ))
-        }
-      </div>
-      <div className="Statbar">
-        {
-          Object.keys(props.statblock.TRNG).map((key, index) => (
-            <Statbox index={index} stat={props.statblock.TRNG[key]} statlabel={key} />
-          ))
-        }
-      </div>
-      <div className="Statbar">
-        {
-          Object.keys(props.statblock.GEAR).map((key, index) => (
-            <Statbox index={index} stat={props.statblock.GEAR[key]} statlabel={key} />
-          ))
-        }
-      </div>
-      <div className="Statbar">
-        {
-          Object.keys(props.defenses).map((key, index) => (
-            <Statbox index={index} stat={props.defenses[key]} statlabel={key} />
-          ))
-        }
+      <div className="SubDivsInRow">
+        <div className="Statbar">
+          {
+            Object.keys(props.statblock.STAT).map((objKey, index) => (
+              <Statbox key={index} stat={props.statblock.STAT[objKey]} statlabel={objKey} statType='STAT' />
+            ))
+          }
+          {
+            Object.keys(props.statblock.ELMT).map((objKey, index) => (
+              <Statbox key={index} stat={props.statblock.ELMT[objKey]} statlabel={objKey} statType='ELMT' />
+            ))
+          }
+          {
+            Object.keys(props.statblock.TRNG).map((objKey, index) => (
+              <Statbox key={index} stat={props.statblock.TRNG[objKey]} statlabel={objKey} statType='TRNG' />
+            ))
+          }
+          {
+            Object.keys(props.statblock.GEAR).map((objKey, index) => (
+              <Statbox key={index} stat={props.statblock.GEAR[objKey]} statlabel={objKey} statType='GEAR' />
+            ))
+          }
+          {
+            Object.keys(props.defenses).map((objKey, index) => (
+              <Statbox key={index} stat={props.defenses[objKey]} statlabel={objKey} statType='DEF' />
+            ))
+          }
+        </div>
       </div>
     </div>
   )

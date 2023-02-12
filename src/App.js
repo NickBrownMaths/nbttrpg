@@ -2,7 +2,6 @@ import { useState, useEffect } from 'react';
 import { Papa } from "papaparse";
 import { getDefenses, getStats, getZeroStats, incrementStat } from './Utils/AllData';
 import './App.css';
-import './Utils/data.csv';
 import NavBar from './components/NavBar';
 import Page from './pages/Page.js';
 
@@ -17,7 +16,7 @@ function App() {
   const [dream, setDream] = useState('');
   const [eccentricity, setEccentricity] = useState('');
   const [flaw, setFlaw] = useState('');
-  const [gear, setGear] = useState({});
+  const [gear, setGear] = useState([]);
 
   const [name, setName] = useState('Adventurer');
   const [level, setLevel] = useState(0);
@@ -25,17 +24,6 @@ function App() {
   const [defenses, setDefenses] = useState(getDefenses(getStats('', '', '', '', '', '',)));
   const [levelUpMessage, setLevelUpMessage] = useState({});
   const [dataMessage, setDataMessage] = useState(null);
-
-  useEffect(() => {
-    //let file = new File([''], './src/Utils/data.csv', {type: 'text/plain'}) ;
-    //let fileReader = new FileReader;
-    //fileReader.readAsText(file);
-    //console.log(file);
-    //console.log(fileReader.result);
-    //console.log(fileReader.error);
-    fetch('./src/Utils/darta.csv')
-    .then(function (response) {console.log(response)})
-  }, []);
 
   useEffect(() => {
     setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw));
@@ -70,9 +58,6 @@ function App() {
       setFlaw(loadCharData.F);
       setStatblock(loadCharData.STATBLOCK);
       setCurrentPage('CC');
-      //setlevel
-      //setname
-      //set everything
     }
   }, [dataMessage]);
 
@@ -84,7 +69,7 @@ function App() {
   buttons.push([() => setCurrentPage('PP'), 'Play',]);
 
   return (
-    <div className="App">
+    <div className="SubDivsInCol">
       <NavBar buttons={buttons} />
       <Page
         currentPage={currentPage}

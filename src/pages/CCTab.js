@@ -1,6 +1,6 @@
 import { AllStats } from "../Utils/AllData";
 
-import StatButton from "../components/StatButton";
+import StatCard from "../components/StatCard";
 import GearButton from "../components/GearButton";
 import CharacterNameForm from "../components/CharacterNameForm";
 import InteractionGrid from "../components/InteractionGrid";
@@ -10,10 +10,10 @@ function CCTab(props) {
 
   if (props.currentTab === 'A') {
     return (
-      <div className="CCButtonArea">
+      <div className="SubDivsInRow">
         {
           allstats.a.map((a, index) => (
-            <StatButton name={a.name} statblock={a} setABCDEF={props.setAncestry} />
+            <StatCard key={index} name={a.name} statblock={a} setABCDEF={props.setAncestry} />
           ))
         }
       </div>
@@ -21,10 +21,10 @@ function CCTab(props) {
   }
   else if (props.currentTab === 'B') {
     return (
-      <div className="CCButtonArea">
+      <div className="SubDivsInRow">
         {
           allstats.b.map((b, index) => (
-            <StatButton name={b.name} statblock={b} setABCDEF={props.setBackground} />
+            <StatCard key={index} name={b.name} statblock={b} setABCDEF={props.setBackground} />
           ))
         }
       </div>
@@ -32,10 +32,10 @@ function CCTab(props) {
   }
   else if (props.currentTab === 'C') {
     return (
-      <div className="CCButtonArea">
+      <div className="SubDivsInRow">
         {
           allstats.c.map((c, index) => (
-            <StatButton name={c.name} statblock={c} setABCDEF={props.setCulture} />
+            <StatCard key={index} name={c.name} statblock={c} setABCDEF={props.setCulture} />
           ))
         }
       </div>
@@ -43,10 +43,10 @@ function CCTab(props) {
   }
   else if (props.currentTab === 'D') {
     return (
-      <div className="CCButtonArea">
+      <div className="SubDivsInRow">
         {
           allstats.d.map((d, index) => (
-            <StatButton name={d.name} statblock={d} setABCDEF={props.setDream} />
+            <StatCard key={index} name={d.name} statblock={d} setABCDEF={props.setDream} />
           ))
         }
       </div>
@@ -54,10 +54,10 @@ function CCTab(props) {
   }
   else if (props.currentTab === 'E') {
     return (
-      <div className="CCButtonArea">
+      <div className="SubDivsInRow">
         {
           allstats.e.map((e, index) => (
-            <StatButton name={e.name} statblock={e} setABCDEF={props.setEccentricity} />
+            <StatCard key={index} name={e.name} statblock={e} setABCDEF={props.setEccentricity} />
           ))
         }
       </div>
@@ -65,10 +65,10 @@ function CCTab(props) {
   }
   else if (props.currentTab === 'F') {
     return (
-      <div className="CCButtonArea">
+      <div className="SubDivsInRow">
         {
           allstats.f.map((f, index) => (
-            <StatButton name={f.name} statblock={f} setABCDEF={props.setFlaw} />
+            <StatCard key={index} name={f.name} statblock={f} setABCDEF={props.setFlaw} />
           ))
         }
       </div>
@@ -76,10 +76,10 @@ function CCTab(props) {
   }
   else if (props.currentTab === 'G') {
     return (
-      <div className="CCButtonArea">
+      <div className="SubDivsInRow">
         {
           allstats.g.map((g, index) => (
-            <GearButton name={g.name} statblock={g} setABCDEF={props.setFlaw} />
+            <StatCard key={index} name={g.name} statblock={g} setABCDEF={props.setFlaw} />
           ))
         }
       </div>
@@ -88,7 +88,7 @@ function CCTab(props) {
   else if (props.currentTab === 'AG') {
     return (
       <div className="GridHolder">
-        <InteractionGrid statblock={props.statblock}/>
+        <InteractionGrid statblock={props.statblock} />
       </div>
     )
   }

@@ -3,6 +3,7 @@ import { useState } from 'react';
 import NavBar from "../components/NavBar";
 import HeroBar from '../components/HeroBar';
 import CCTab from './CCTab';
+import GearBar from '../components/GearBar';
 
 function CharacterCreation(props) {
 
@@ -21,12 +22,15 @@ function CharacterCreation(props) {
 
   return (
     <div>
+      <div className='SubDivsInRow'>
       <HeroBar
         name={props.name}
         statblock={props.statblock}
         defenses={props.defenses}
         level={props.level}
       />
+      <GearBar/>
+      </div>
       <NavBar buttons={buttons} />
       <CCTab
         currentTab={currentTab}

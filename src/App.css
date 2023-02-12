@@ -1,23 +1,84 @@
 /*Colour Defs*/
 :root {
-  --colour1: #041C32;
-  --colour2: #04293A;
-  --colour3: #064663;
-  --colour4: #ECB365;
+  --colourDark: #041C32;
+  --colourMid: #04293A;
+  --colourLight: #064663;
+  --colourAccent: #ECB365;
+  --colourRed:#bb0000;
+  --colourBlue: #0066cc;
+  --colourPurple: #8800bb;
+  --colourGray: #444444;
+  --colourGreen: #006600;
 }
 
 /*Standard things*/
 body {
-  background-color: var(--colour1);
+  background-color: var(--colourDark);
   overflow-y: scroll;
-}
-.App {
-  margin: auto;
   text-align: center;
   font-family: 'Consolas';
 }
+.SubDivsInRow,
+.SubDivsInCol {
+  justify-content: center;
+  align-content: center;
+  vertical-align: middle;
+  display: flex;
+  flex-wrap: wrap;
+}
+.SubDivsInRow {
+  flex-direction: row;
+}
+.SubDivsInCol {
+  flex-direction: column;
+}
+.Card {
+  display: inline-block;
+  border-style: solid;
+  border-radius: 8px;
+  max-width: 30%;
+  margin: 5px;
+}
+.ColourDark {
+  background-color: var(--colourDark);
+}
+.ColourMid {
+  background-color: var(--colourMid);
+}
+.ColourMidHover:hover {
+  background-color: var(--colourMid);
+}
+.ColourLight {
+  background-color: var(--colourLight);
+}
+.ColourAccent {
+  background-color: var(--colourAccent);
+}
 
-/*Controls*/ 
+/*Stat boxes*/
+.StatNumber {
+  font-size: x-large;
+}
+.StatLabel {
+  font-size: small;
+}
+.STAT {
+  color: var(--colourRed);
+}
+.ELMT {
+  color: var(--colourPurple);
+}
+.TRNG {
+  color: var(--colourBlue);
+}
+.GEAR {
+  color: var(--colourGreen);
+}
+.DEF {
+  color: var(--colourGray);
+}
+
+/*Controls*/
 .NameSubmit,
 .NameInput,
 .LoadSubmit {
@@ -41,21 +102,14 @@ body {
   min-width: 400px;
   margin: 5px
 }
-.NavBar {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-content: center;
-
-}
 .NavButton {
   font-family: 'Consolas';
   font-size: large;
-  background-color: var(--colour3);
+  background-color: var(--colourLight);
   border-radius: 12px;
   min-height: 40px;
   border-color: black;
-  color: var(--colour4);
+  color: var(--colourAccent);
 
   min-width: 150px;
   max-width: 150px;
@@ -66,11 +120,10 @@ body {
 .NavButton:hover,
 .StatButton:hover,
 .LevelUpButton:hover {
-  background-color: var(--colour2);
+  background-color: var(--colourMid);
 }
 
-/*Centred boxes with colour2*/
-.HeroBar,
+/*Centred boxes with colourMid*/
 .InstructionBox {
   justify-content: center;
   align-content: center;
@@ -78,29 +131,24 @@ body {
   margin: 10px;
   border-radius: 12px;
   border-color: black;
-  background-color: var(--colour2);
+  background-color: var(--colourMid);
   border-style: solid;
 }
+
 .InstructionBox {
-  color: var(--colour4);
+  color: var(--colourAccent);
   word-wrap: break-word;
   min-height: 40px;
   min-width: 600px;
   max-width: 800px;
 }
+
 .InstructionHolder {
   display: block;
   flex-direction: column;
 }
 
 /*Statbox Holders*/
-.StatButton {
-  margin: 10px;
-  border-radius: 12px;
-  border-color: black;
-  background-color: var(--colour3);
-  border-style: solid;
-}
 .Statbar {
   margin: 5px;
   margin-top: 5px;
@@ -117,15 +165,17 @@ body {
   color: black;
   border-style: solid;
 
-  background-color: var(--colour1);
+  background-color: var(--colourDark);
 
 }
+
 .GridHolder {
   display: flex;
   justify-content: center;
   align-content: center;
   flex-direction: row;
 }
+
 .GridBase {
   display: grid;
   column-gap: 5px;
@@ -137,7 +187,7 @@ body {
   border-style: solid;
   border-radius: 12px;
   border-color: black;
-  background-color: var(--colour2);
+  background-color: var(--colourMid);
 }
 
 /*Statboxes*/
@@ -158,9 +208,10 @@ body {
   border-radius: 12px;
   border-color: black;
 
-  background-color: var(--colour4);
+  background-color: var(--colourAccent);
 
 }
+
 .Statbox,
 .StatboxZero,
 .LevelUpButton,
@@ -168,52 +219,36 @@ body {
 .InterBoxAxis {
   min-width: 90px;
   max-width: 90px;
-  min-height: 60px;
-  max-height: 60px;
+  min-height: 50px;
+  max-height: 50px;
   border-radius: 12px;
   border-color: black;
 }
+
 .StatboxZero {
-  background-color: var(--colour2);
-  color: var(--colour2);
+  background-color: var(--colourMid);
+  color: var(--colourMid);
 }
+
 .InterBox,
 .InterBoxAxis {
   border-style: solid;
   border-radius: 12px;
   border-color: black;
 
-  color: var(--colour4);
-  background-color: var(--colour3);
+  color: var(--colourAccent);
+  background-color: var(--colourLight);
 }
 
 .InterBoxAxis {
   color: black;
   background-color: #ECB365;
 }
-.stat {
-  font-size: xx-large;
-}
-.statLabel {
-  font-size: small;
-}
-.NameBox,
-.GearNameBox {
+
+.NameBox {
   font-size: large;
   display: flex;
   justify-content: center;
   align-content: center;
   flex-direction: column;
 }
-.NameBox {
-  min-width: 410px;
-  max-width: 410px;
-}
-.GearNameBox {
-  min-width: 620px;
-  max-width: 620px;
-}
-
-
-
-
