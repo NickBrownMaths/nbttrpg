@@ -10,6 +10,7 @@ function CharacterCreation(props) {
   const [currentTab, setCurrentTab] = useState('A');
 
   let buttons = [];
+  buttons.push([() => setCurrentTab('N'), 'Name',]);
   buttons.push([() => setCurrentTab('A'), 'Ancestry ' + props.ancestry,]);
   buttons.push([() => setCurrentTab('B'), 'Background ' + props.background,]);
   buttons.push([() => setCurrentTab('C'), 'Culture ' + props.culture,]);
@@ -17,19 +18,19 @@ function CharacterCreation(props) {
   buttons.push([() => setCurrentTab('E'), 'Eccentricity ' + props.eccentricity,]);
   buttons.push([() => setCurrentTab('F'), 'Flaw ' + props.flaw,]);
   buttons.push([() => setCurrentTab('G'), 'Gear',]);
-  buttons.push([() => setCurrentTab('N'), 'Name',]);
+  buttons.push([() => setCurrentTab('LU'), 'Level Up',]);
   buttons.push([() => setCurrentTab('AG'), 'Ability Grid',]);
 
   return (
     <div>
       <div className='SubDivsInRow'>
-      <HeroBar
-        name={props.name}
-        statblock={props.statblock}
-        defenses={props.defenses}
-        level={props.level}
-      />
-      <GearBar/>
+        <HeroBar
+          name={props.name}
+          statblock={props.statblock}
+          defenses={props.defenses}
+          level={props.level}
+        />
+        <GearBar />
       </div>
       <NavBar buttons={buttons} />
       <CCTab
@@ -42,6 +43,7 @@ function CharacterCreation(props) {
         setEccentricity={props.setEccentricity}
         setFlaw={props.setFlaw}
         setName={props.setName}
+        setLevelUpMessage={props.setLevelUpMessage}
       />
     </div>
   )

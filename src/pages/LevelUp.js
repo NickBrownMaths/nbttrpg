@@ -5,12 +5,6 @@ import LevelUpButton from "../components/LevelUpButton";
 function LevelUp(props) {
   return (
     <div>
-      <HeroBar
-        name={props.name}
-        statblock={props.statblock}
-        defenses={props.defenses}
-        level={props.level}
-      />
       <div className="Statbar">
         {
           Object.keys(props.statblock.STAT).map((objKey, index) => (
@@ -28,8 +22,6 @@ function LevelUp(props) {
           ))
         }
       </div>
-
-
     </div>
   )
 }

@@ -1,7 +1,6 @@
 import CharacterCreation from "./CharacterCreation";
 import CharacterSave from "./CharacterSave";
 import CharacterLoad from "./CharacterLoad";
-import LevelUp from "./LevelUp";
 import Play from "./Play";
 
 function Page(props) {
@@ -25,6 +24,7 @@ function Page(props) {
       dream={props.dream}
       eccentricity={props.eccentricity}
       flaw={props.flaw}
+      setLevelUpMessage={props.setLevelUpMessage}
     />
   } else if (props.currentPage === 'CL') {
     return (
@@ -49,16 +49,7 @@ function Page(props) {
       />
     )
   }
-  else if (props.currentPage === 'LU') {
-    return <LevelUp
-      name={props.name}
-      statblock={props.statblock}
-      defenses={props.defenses}
-      level={props.level}
-
-      setLevelUpMessage={props.setLevelUpMessage}
-    />
-  } else {
+  else {
     return <Play
       name={props.name}
       statblock={props.statblock}

@@ -6,8 +6,6 @@ import NavBar from './components/NavBar';
 import Page from './pages/Page.js';
 
 function App() {
-  const [parsedCsvData, setParsedCsvData] = useState([]);
-
   const [currentPage, setCurrentPage] = useState('CC');
 
   const [ancestry, setAncestry] = useState('');
@@ -17,6 +15,7 @@ function App() {
   const [eccentricity, setEccentricity] = useState('');
   const [flaw, setFlaw] = useState('');
   const [gear, setGear] = useState([]);
+  const [addGear, setAddGear] = useState(null);
 
   const [name, setName] = useState('Adventurer');
   const [level, setLevel] = useState(0);
@@ -41,7 +40,7 @@ function App() {
 
   useEffect(() => {
     setStatblock(incrementStat(statblock, levelUpMessage));
-    setDefenses(getDefenses(statblock));                                                                        
+    setDefenses(getDefenses(statblock));
     setLevel(level + 1);
   }, [levelUpMessage]);
 
@@ -65,7 +64,6 @@ function App() {
   buttons.push([() => setCurrentPage('CC'), 'Character Creation',]);
   buttons.push([() => setCurrentPage('CL'), 'Character Load',]);
   buttons.push([() => setCurrentPage('CS'), 'Character Save',]);
-  buttons.push([() => setCurrentPage('LU'), 'Level Up',]);
   buttons.push([() => setCurrentPage('PP'), 'Play',]);
 
   return (
@@ -97,6 +95,7 @@ function App() {
         gear={gear}
         setLevelUpMessage={setLevelUpMessage}
         setDataMessage={setDataMessage}
+        setAddGear={setAddGear}
       />
     </div>
   );
