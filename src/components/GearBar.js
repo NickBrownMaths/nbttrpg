@@ -6,7 +6,7 @@ function GearBar(props) {
       <div className="WideCard ColourMid">
         {
           props.gear.map((g, index) => (
-            <StatCard key={index} name={g.name} statblock={g} setABCDEF={props.setDelGear} />
+            <StatCard key={index} index={index} name={g.name} statblock={g} setABCDEF={props.setDelGear} />
           ))
         }
       </div>

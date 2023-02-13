@@ -13,7 +13,7 @@ function CCTab(props) {
       <div className="SubDivsInRow">
         {
           allstats.a.map((a, index) => (
-            <StatCard key={index} name={a.name} statblock={a} setABCDEF={props.setAncestry} />
+            <StatCard key={index} index={index} name={a.name} statblock={a} setABCDEF={props.setAncestry} />
           ))
         }
       </div>
@@ -24,7 +24,7 @@ function CCTab(props) {
       <div className="SubDivsInRow">
         {
           allstats.b.map((b, index) => (
-            <StatCard key={index} name={b.name} statblock={b} setABCDEF={props.setBackground} />
+            <StatCard key={index} index={index} name={b.name} statblock={b} setABCDEF={props.setBackground} />
           ))
         }
       </div>
@@ -35,7 +35,7 @@ function CCTab(props) {
       <div className="SubDivsInRow">
         {
           allstats.c.map((c, index) => (
-            <StatCard key={index} name={c.name} statblock={c} setABCDEF={props.setCulture} />
+            <StatCard key={index} index={index} name={c.name} statblock={c} setABCDEF={props.setCulture} />
           ))
         }
       </div>
@@ -46,7 +46,7 @@ function CCTab(props) {
       <div className="SubDivsInRow">
         {
           allstats.d.map((d, index) => (
-            <StatCard key={index} name={d.name} statblock={d} setABCDEF={props.setDream} />
+            <StatCard key={index} index={index} name={d.name} statblock={d} setABCDEF={props.setDream} />
           ))
         }
       </div>
@@ -57,7 +57,7 @@ function CCTab(props) {
       <div className="SubDivsInRow">
         {
           allstats.e.map((e, index) => (
-            <StatCard key={index} name={e.name} statblock={e} setABCDEF={props.setEccentricity} />
+            <StatCard key={index} index={index} name={e.name} statblock={e} setABCDEF={props.setEccentricity} />
           ))
         }
       </div>
@@ -68,7 +68,7 @@ function CCTab(props) {
       <div className="SubDivsInRow">
         {
           allstats.f.map((f, index) => (
-            <StatCard key={index} name={f.name} statblock={f} setABCDEF={props.setFlaw} />
+            <StatCard key={index} index={index} name={f.name} statblock={f} setABCDEF={props.setFlaw} />
           ))
         }
       </div>
@@ -79,7 +79,7 @@ function CCTab(props) {
       <div className="SubDivsInRow">
         {
           allstats.g.map((g, index) => (
-            <StatCard key={index} name={g.name} statblock={g} setABCDEF={props.setAddGear} />
+            <StatCard key={index} index={index} name={g.name} statblock={g} setABCDEF={props.setAddGear} />
           ))
         }
       </div>

@@ -133,29 +133,30 @@ body {
 }
 
 .STAT {
-  color: var(--colourRed);
+  background-color: var(--colourRed);
 }
 
 .ELMT {
-  color: var(--colourPurple);
+  background-color: var(--colourPurple);
 }
 
 .TRNG {
-  color: var(--colourBlue);
+  background-color: var(--colourBlue);
 }
 
 .GEAR {
-  color: var(--colourGreen);
+  background-color: var(--colourGreen);
 }
 
 .DEF {
-  color: var(--colourGray);
+  background-color: var(--colourGray);
 }
 
 /*Controls*/
 .NameSubmit,
 .NameInput,
 .LoadSubmit {
+  font-family: var(--fontFont);
   border-radius: 5px;
   font-size: x-large;
   text-align: center;

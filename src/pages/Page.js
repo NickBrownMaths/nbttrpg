@@ -24,6 +24,7 @@ function Page(props) {
       dream={props.dream}
       eccentricity={props.eccentricity}
       flaw={props.flaw}
+      charChoices={props.charChoices}
       setLevelUpMessage={props.setLevelUpMessage}
       setAddGear={props.setAddGear}
       gear={props.gear}

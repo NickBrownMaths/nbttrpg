@@ -4,7 +4,7 @@ import Statbox from "./Statbox";
 
 function StatCard(props) {
   return (
-    <button className="NarrowCard ColourLight ColourMidHover" onClick={() => { props.setABCDEF(props.name) }}>
+    <button className="NarrowCard ColourLight ColourMidHover" onClick={() => { props.setABCDEF(props.index) }}>
       <div className="NameBox"> {props.name} </div>
       <div className="Statbar">
         {

@@ -7,32 +7,31 @@ import Page from './pages/Page.js';
 function App() {
   const [currentPage, setCurrentPage] = useState('CC');
 
-  const [ancestry, setAncestry] = useState('');
-  const [background, setBackground] = useState('');
-  const [culture, setCulture] = useState('');
-  const [dream, setDream] = useState('');
-  const [eccentricity, setEccentricity] = useState('');
-  const [flaw, setFlaw] = useState('');
+  const [ancestry, setAncestry] = useState(0);
+  const [background, setBackground] = useState(0);
+  const [culture, setCulture] = useState(0);
+  const [dream, setDream] = useState(0);
+  const [eccentricity, setEccentricity] = useState(0);
+  const [flaw, setFlaw] = useState(0);
+  const [charChoices, setCharChoices] = useState(['', '', '', '', '', '',]);
+
   const [gear, setGear] = useState([]);
   const [addGear, setAddGear] = useState(null);
   const [delGear, setDelGear] = useState(null);
 
   const [name, setName] = useState('Adventurer');
   const [level, setLevel] = useState(0);
-  const [statblock, setStatblock] = useState(getStats('', '', '', '', '', '',));
-  const [defenses, setDefenses] = useState(getDefenses(getStats('', '', '', '', '', '',)));
+  const [statblock, setStatblock] = useState(getStats(0, 0, 0, 0, 0, 0, []));
+  const [defenses, setDefenses] = useState(getDefenses(getStats(0, 0, 0, 0, 0, 0, [])));
   const [levelUpMessage, setLevelUpMessage] = useState({});
   const [dataMessage, setDataMessage] = useState(null);
 
   useEffect(() => {
-    setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw));
+    setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw, gear));
     setLevel(1);
-  }, [ancestry, background, culture, dream, eccentricity, flaw]);
-
-  useEffect(() => {
-    setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw));
-    setLevel(1);
-  }, [ancestry, background, culture, dream, eccentricity, flaw]);
+    let data = new AllStats();
+    setCharChoices([data.a[ancestry].name, data.b[background].name, data.c[culture].name, data.d[dream].name, data.e[eccentricity].name, data.f[flaw].name]);
+  }, [ancestry, background, culture, dream, eccentricity, flaw, gear]);
 
   useEffect(() => {
     setDefenses(getDefenses(statblock));
@@ -40,31 +39,22 @@ function App() {
 
   useEffect(() => {
     if (addGear !== null) {
-      let stats = new AllStats() ;
-      for (let i = 0; i < stats.g.length ; i++) {
-        if (stats.g[i].name === addGear) {
-          setGear([...gear, stats.g[i]])
-        }
-      }
+      let stats = new AllStats();
+      setGear([...gear, stats.g[addGear]])
     }
     setAddGear(null);
   }, [addGear]);
-
+  
   useEffect(() => {
     if (delGear !== null) {
-      
-      
-      
-      
-
-
-
-      
-      
+      let newGear = gear;
+      let removedGear = newGear.splice(delGear, 1);
+      setGear(newGear);
+      setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw, newGear));
       setDelGear(null);
     }
   }, [delGear]);
-
+  
   useEffect(() => {
     setStatblock(incrementStat(statblock, levelUpMessage));
     setDefenses(getDefenses(statblock));
@@ -119,6 +109,7 @@ function App() {
         dream={dream}
         eccentricity={eccentricity}
         flaw={flaw}
+        charChoices={charChoices}
         gear={gear}
         setLevelUpMessage={setLevelUpMessage}
         setDataMessage={setDataMessage}
