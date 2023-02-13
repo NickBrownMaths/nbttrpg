@@ -1,5 +1,3 @@
-import HeroBar from "../components/HeroBar";
-import InteractionGrid from "../components/InteractionGrid";
 import LevelUpButton from "../components/LevelUpButton";
 
 function LevelUp(props) {

@@ -2,8 +2,6 @@ import { useForm } from 'react-hook-form';
 
 function CharacterLoadForm(props) {
   
-  let inputData = '';
-
   const { register, handleSubmit } = useForm();
 
   return (

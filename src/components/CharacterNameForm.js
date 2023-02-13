@@ -1,8 +1,6 @@
 import { useForm } from 'react-hook-form';
 
 function CharacterNameForm(props) {
-  
-  let inputData = '';
 
   const { register, handleSubmit } = useForm();
 

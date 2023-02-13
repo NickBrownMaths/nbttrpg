@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Papa } from "papaparse";
-import { AllStats, getDefenses, getStats, getZeroStats, incrementStat } from './Utils/AllData';
+import { AllStats, getDefenses, getStats, incrementStat } from './Utils/AllData';
 import './App.css';
 import NavBar from './components/NavBar';
 import Page from './pages/Page.js';
@@ -16,6 +15,7 @@ function App() {
   const [flaw, setFlaw] = useState('');
   const [gear, setGear] = useState([]);
   const [addGear, setAddGear] = useState(null);
+  const [delGear, setDelGear] = useState(null);
 
   const [name, setName] = useState('Adventurer');
   const [level, setLevel] = useState(0);
@@ -40,20 +40,30 @@ function App() {
 
   useEffect(() => {
     if (addGear !== null) {
-
       let stats = new AllStats() ;
-
       for (let i = 0; i < stats.g.length ; i++) {
-        //console.log(stats.g[i])
         if (stats.g[i].name === addGear) {
           setGear([...gear, stats.g[i]])
         }
       }
-
-      console.log(gear);
-      setAddGear(null);
     }
+    setAddGear(null);
   }, [addGear]);
+
+  useEffect(() => {
+    if (delGear !== null) {
+      
+      
+      
+      
+
+
+
+      
+      
+      setDelGear(null);
+    }
+  }, [delGear]);
 
   useEffect(() => {
     setStatblock(incrementStat(statblock, levelUpMessage));
@@ -113,6 +123,7 @@ function App() {
         setLevelUpMessage={setLevelUpMessage}
         setDataMessage={setDataMessage}
         setAddGear={setAddGear}
+        setDelGear={setDelGear}
       />
     </div>
   );

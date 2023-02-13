@@ -1,10 +1,8 @@
-import { useState } from "react"
 import { getStatInteraction } from "../Utils/AllData";
 import InteractionGridBox from "./InteractionGridBox";
 
 function InteractionGrid(props) {
 
-  const [onOff, setOnOff] = useState(false);
   //SKILL = STAT + (TRNG - 1) * STAT
   return (
     <div className="GridBase">

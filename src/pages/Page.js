@@ -27,6 +27,7 @@ function Page(props) {
       setLevelUpMessage={props.setLevelUpMessage}
       setAddGear={props.setAddGear}
       gear={props.gear}
+      setDelGear={props.setDelGear}
     />
   } else if (props.currentPage === 'CL') {
     return (
