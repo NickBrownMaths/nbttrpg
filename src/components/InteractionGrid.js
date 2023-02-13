@@ -22,7 +22,7 @@ function InteractionGrid(props) {
       <InteractionGridBox isAxis={0} number={getStatInteraction(props.statblock.STAT.con, props.statblock.TRNG.fighting) } label={'protecting'} />
       <InteractionGridBox isAxis={0} number={getStatInteraction(props.statblock.STAT.dex, props.statblock.TRNG.fighting) } label={'fencing'} />
       <InteractionGridBox isAxis={0} number={getStatInteraction(props.statblock.STAT.agi, props.statblock.TRNG.fighting) } label={'unarmed'} />
-      <InteractionGridBox isAxis={0} number={getStatInteraction(props.statblock.STAT.spd, props.statblock.TRNG.fighting) } label={''} />
+      <InteractionGridBox isAxis={0} number={getStatInteraction(props.statblock.STAT.spd, props.statblock.TRNG.fighting) } label={'charge'} />
       <InteractionGridBox isAxis={0} number={getStatInteraction(props.statblock.STAT.per, props.statblock.TRNG.fighting) } label={'projectile'} />
       <InteractionGridBox isAxis={0} number={getStatInteraction(props.statblock.STAT.int, props.statblock.TRNG.fighting) } label={'tactics'} />
       <InteractionGridBox isAxis={0} number={getStatInteraction(props.statblock.STAT.wis, props.statblock.TRNG.fighting) } label={'focus'} />
