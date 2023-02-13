@@ -79,7 +79,7 @@ function CCTab(props) {
       <div className="SubDivsInRow">
         {
           allstats.g.map((g, index) => (
-            <StatCard key={index} name={g.name} statblock={g} setABCDEF={props.setFlaw} />
+            <StatCard key={index} name={g.name} statblock={g} setABCDEF={props.setAddGear} />
           ))
         }
       </div>
@@ -95,7 +95,6 @@ function CCTab(props) {
   else if (props.currentTab === 'LU') {
     return <LevelUp
       statblock={props.statblock}
-
       setLevelUpMessage={props.setLevelUpMessage}
     />
   }

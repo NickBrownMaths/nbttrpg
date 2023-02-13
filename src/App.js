@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Papa } from "papaparse";
-import { getDefenses, getStats, getZeroStats, incrementStat } from './Utils/AllData';
+import { AllStats, getDefenses, getStats, getZeroStats, incrementStat } from './Utils/AllData';
 import './App.css';
 import NavBar from './components/NavBar';
 import Page from './pages/Page.js';
@@ -37,6 +37,23 @@ function App() {
   useEffect(() => {
     setDefenses(getDefenses(statblock));
   }, [statblock]);
+
+  useEffect(() => {
+    if (addGear !== null) {
+
+      let stats = new AllStats() ;
+
+      for (let i = 0; i < stats.g.length ; i++) {
+        //console.log(stats.g[i])
+        if (stats.g[i].name === addGear) {
+          setGear([...gear, stats.g[i]])
+        }
+      }
+
+      console.log(gear);
+      setAddGear(null);
+    }
+  }, [addGear]);
 
   useEffect(() => {
     setStatblock(incrementStat(statblock, levelUpMessage));

@@ -25,6 +25,8 @@ function Page(props) {
       eccentricity={props.eccentricity}
       flaw={props.flaw}
       setLevelUpMessage={props.setLevelUpMessage}
+      setAddGear={props.setAddGear}
+      gear={props.gear}
     />
   } else if (props.currentPage === 'CL') {
     return (

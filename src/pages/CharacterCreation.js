@@ -30,7 +30,7 @@ function CharacterCreation(props) {
           defenses={props.defenses}
           level={props.level}
         />
-        <GearBar />
+        <GearBar gear={props.gear}/>
       </div>
       <NavBar buttons={buttons} />
       <CCTab
@@ -44,6 +44,7 @@ function CharacterCreation(props) {
         setFlaw={props.setFlaw}
         setName={props.setName}
         setLevelUpMessage={props.setLevelUpMessage}
+        setAddGear={props.setAddGear}
       />
     </div>
   )
