@@ -1,13 +1,15 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import NavBar from "../components/NavBar";
 import HeroBar from '../components/HeroBar';
 import CCTab from './CCTab';
 import GearBar from '../components/GearBar';
+import SearchForm from '../components/SearchForm';
 
 function CharacterCreation(props) {
 
   const [currentTab, setCurrentTab] = useState('A');
+  const [searchTerm, setSearchTerm] = useState('');
 
   let buttons = [];
   buttons.push([() => setCurrentTab('N'), 'Name',]);
@@ -36,6 +38,7 @@ function CharacterCreation(props) {
         />
       </div>
       <NavBar buttons={buttons} />
+      <SearchForm setSearchTerm={setSearchTerm} />
       <CCTab
         currentTab={currentTab}
         statblock={props.statblock}
@@ -48,6 +51,7 @@ function CharacterCreation(props) {
         setName={props.setName}
         setLevelUpMessage={props.setLevelUpMessage}
         setAddGear={props.setAddGear}
+        searchTerm={searchTerm}
       />
     </div>
   )
