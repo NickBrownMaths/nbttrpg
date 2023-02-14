@@ -7,6 +7,7 @@
   --colourLight: #064663;
   --colourAccent: #ECB365;
   --colourRed: #bb0000;
+  --colourDarkRed: #880000;
   --colourBlue: #0066cc;
   --colourPurple: #8800bb;
   --colourGray: #444444;
@@ -39,6 +40,11 @@ body {
   flex-direction: column;
 }
 
+.SubDivsAtTop {
+  display: inline-block;
+  max-width: calc(20vw + 15px) ;
+}
+
 .Card,
 .WideCard,
 .NarrowCard {
@@ -46,12 +52,16 @@ body {
   display: inline-block;
   border-style: solid;
   border-radius: 12px;
-  width: 25vw;
+  width: 20vw;
   margin: 5px;
 }
 
 .NarrowCard {
   max-width: 250px;
+}
+
+.MediumWideCard {
+  width: 45vw;
 }
 
 .WideCard {
@@ -152,10 +162,15 @@ body {
   background-color: var(--colourGray);
 }
 
+.ONSLEEP {
+  background-color: var(--colourDarkRed);
+}
+
 /*Controls*/
 .NameSubmit,
 .NameInput,
-.LoadSubmit {
+.LoadSubmit,
+.SearchInput {
   font-family: var(--fontFont);
   border-radius: 5px;
   font-size: x-large;
@@ -164,6 +179,11 @@ body {
   min-height: 60px;
   min-width: 60px;
   margin: 5px
+}
+
+.SearchInput{
+  min-height: 35px;
+  width: 18vw;
 }
 
 .LoadInput {

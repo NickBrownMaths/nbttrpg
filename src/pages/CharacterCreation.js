@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 import NavBar from "../components/NavBar";
 import HeroBar from '../components/HeroBar';
 import CCTab from './CCTab';
-import GearBar from '../components/GearBar';
+import ClickBar from '../components/ClickBar';
 import SearchForm from '../components/SearchForm';
 
 function CharacterCreation(props) {
@@ -32,11 +32,13 @@ function CharacterCreation(props) {
           statblock={props.statblock}
           defenses={props.defenses}
           level={props.level}
+          hideNeg={true}
         />
-        <GearBar
-          gear={props.gear}
-          setDelGear={props.setDelGear}
+        <ClickBar
+          input={props.gear}
+          onClick={props.setDelGear}
           cardWidth='WideCard'
+          hideNeg={true}
         />
       </div>
       <NavBar buttons={buttons} />

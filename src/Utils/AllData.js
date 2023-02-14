@@ -217,7 +217,7 @@ export function getZeroStats() {
   return allStats.z[1];
 }
 
-export function getStats(a, b, c, d, e, f, g) {
+export function getStats(a, b, c, d, e, f, g, tib, tibb, tim, timm) {
   let allStats = new AllStats();
   let statsOut = allStats.z[0];
 
@@ -245,14 +245,32 @@ export function getStats(a, b, c, d, e, f, g) {
   Object.keys(allStats.f[f].ELMT).map((key) => (statsOut.ELMT[key] += allStats.f[f].ELMT[key]));
   Object.keys(allStats.f[f].TRNG).map((key) => (statsOut.TRNG[key] += allStats.f[f].TRNG[key]));
   Object.keys(allStats.f[f].GEAR).map((key) => (statsOut.GEAR[key] += allStats.f[f].GEAR[key]));
-
   for (let i = 0; i < g.length; i++) {
     Object.keys(g[i].STAT).map((key) => (statsOut.STAT[key] += g[i].STAT[key]));
     Object.keys(g[i].ELMT).map((key) => (statsOut.ELMT[key] += g[i].ELMT[key]));
     Object.keys(g[i].TRNG).map((key) => (statsOut.TRNG[key] += g[i].TRNG[key]));
     Object.keys(g[i].GEAR).map((key) => (statsOut.GEAR[key] = Math.max(statsOut.GEAR[key], g[i].GEAR[key])));
   }
-
+  for (let i = 0; i < tib.length; i++) {
+    Object.keys(tib[i].STAT).map((key) => (statsOut.STAT[key] += tib[i].STAT[key]));
+    Object.keys(tib[i].ELMT).map((key) => (statsOut.ELMT[key] += tib[i].ELMT[key]));
+    Object.keys(tib[i].TRNG).map((key) => (statsOut.TRNG[key] += tib[i].TRNG[key]));
+  }
+  for (let i = 0; i < tibb.length; i++) {
+    Object.keys(tibb[i].STAT).map((key) => (statsOut.STAT[key] += tibb[i].STAT[key]));
+    Object.keys(tibb[i].ELMT).map((key) => (statsOut.ELMT[key] += tibb[i].ELMT[key]));
+    Object.keys(tibb[i].TRNG).map((key) => (statsOut.TRNG[key] += tibb[i].TRNG[key]));
+  }
+  for (let i = 0; i < tim.length; i++) {
+    Object.keys(tim[i].STAT).map((key) => (statsOut.STAT[key] += tim[i].STAT[key]));
+    Object.keys(tim[i].ELMT).map((key) => (statsOut.ELMT[key] += tim[i].ELMT[key]));
+    Object.keys(tim[i].TRNG).map((key) => (statsOut.TRNG[key] += tim[i].TRNG[key]));
+  }
+  for (let i = 0; i < timm.length; i++) {
+    Object.keys(timm[i].STAT).map((key) => (statsOut.STAT[key] += timm[i].STAT[key]));
+    Object.keys(timm[i].ELMT).map((key) => (statsOut.ELMT[key] += timm[i].ELMT[key]));
+    Object.keys(timm[i].TRNG).map((key) => (statsOut.TRNG[key] += timm[i].TRNG[key]));
+  }
 
   return statsOut;
 }
