@@ -53,12 +53,14 @@ function Page(props) {
       />
     )
   }
-  else {
+  else if (props.currentPage === 'PP') {
     return <Play
       name={props.name}
       statblock={props.statblock}
       defenses={props.defenses}
       level={props.level}
+      gear={props.gear}
+      setDelGear={props.setDelGear}
     />
   }
 }

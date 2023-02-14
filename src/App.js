@@ -78,6 +78,7 @@ function App() {
   }, [dataMessage]);
 
   let buttons = [];
+  buttons.push([() => setCurrentPage('GG'), 'Glossary',]);
   buttons.push([() => setCurrentPage('CC'), 'Character Creation',]);
   buttons.push([() => setCurrentPage('CL'), 'Character Load',]);
   buttons.push([() => setCurrentPage('CS'), 'Character Save',]);

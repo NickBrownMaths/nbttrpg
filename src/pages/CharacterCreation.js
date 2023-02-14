@@ -36,6 +36,7 @@ function CharacterCreation(props) {
         <GearBar
           gear={props.gear}
           setDelGear={props.setDelGear}
+          cardWidth='WideCard'
         />
       </div>
       <NavBar buttons={buttons} />

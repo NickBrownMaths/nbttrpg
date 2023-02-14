@@ -93,7 +93,7 @@ function InteractionGrid(props) {
       <InteractionGridBox isAxis={0} number={getStatInteraction(props.statblock.STAT.dex, props.statblock.TRNG.subterfuge) } label={'sleight'} />
       <InteractionGridBox isAxis={0} number={getStatInteraction(props.statblock.STAT.agi, props.statblock.TRNG.subterfuge) } label={'stealth'} />
       <InteractionGridBox isAxis={0} number={getStatInteraction(props.statblock.STAT.spd, props.statblock.TRNG.subterfuge) } label={''} />
-      <InteractionGridBox isAxis={0} number={getStatInteraction(props.statblock.STAT.per, props.statblock.TRNG.subterfuge) } label={'spying'} />
+      <InteractionGridBox isAxis={0} number={getStatInteraction(props.statblock.STAT.per, props.statblock.TRNG.subterfuge) } label={'inspecting'} />
       <InteractionGridBox isAxis={0} number={getStatInteraction(props.statblock.STAT.int, props.statblock.TRNG.subterfuge) } label={'encryption'} />
       <InteractionGridBox isAxis={0} number={getStatInteraction(props.statblock.STAT.wis, props.statblock.TRNG.subterfuge) } label={'deception'} />
       <InteractionGridBox isAxis={0} number={getStatInteraction(props.statblock.STAT.cha, props.statblock.TRNG.subterfuge) } label={'misdirection'} />

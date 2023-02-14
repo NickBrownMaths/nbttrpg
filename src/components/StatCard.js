@@ -11,22 +11,22 @@ function StatCard(props) {
         <div className="Statbar">
           {
             Object.keys(props.statblock.STAT).map((objKey, index) => (
-              <Statbox key={index} stat={props.statblock.STAT[objKey]} statlabel={objKey} statType='STAT' />
+              <Statbox key={index} stat={props.statblock.STAT[objKey]} statlabel={objKey} statType='STAT' isBig={props.isBig}/>
             ))
           }
           {
             Object.keys(props.statblock.ELMT).map((objKey, index) => (
-              <Statbox key={index} stat={props.statblock.ELMT[objKey]} statlabel={objKey} statType='ELMT' />
+              <Statbox key={index} stat={props.statblock.ELMT[objKey]} statlabel={objKey} statType='ELMT' isBig={props.isBig}/>
             ))
           }
           {
             Object.keys(props.statblock.TRNG).map((objKey, index) => (
-              <Statbox key={index} stat={props.statblock.TRNG[objKey]} statlabel={objKey} statType='TRNG' />
+              <Statbox key={index} stat={props.statblock.TRNG[objKey]} statlabel={objKey} statType='TRNG' isBig={props.isBig}/>
             ))
           }
           {
             Object.keys(props.statblock.GEAR).map((objKey, index) => (
-              <Statbox key={index} stat={props.statblock.GEAR[objKey]} statlabel={objKey} statType='GEAR' />
+              <Statbox key={index} stat={props.statblock.GEAR[objKey]} statlabel={objKey} statType='GEAR' isBig={props.isBig}/>
             ))
           }
         </div>
