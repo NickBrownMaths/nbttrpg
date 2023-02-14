@@ -10,18 +10,19 @@ function CharacterCreation(props) {
 
   const [currentTab, setCurrentTab] = useState('A');
   const [searchTerm, setSearchTerm] = useState('');
+  const [showSearchBar, setShowSearchBar] = useState(true);
 
   let buttons = [];
-  buttons.push([() => setCurrentTab('N'), 'Name',]);
-  buttons.push([() => setCurrentTab('A'), 'Ancestry ' + props.charChoices[0],]);
-  buttons.push([() => setCurrentTab('B'), 'Background ' + props.charChoices[1],]);
-  buttons.push([() => setCurrentTab('C'), 'Culture ' + props.charChoices[2],]);
-  buttons.push([() => setCurrentTab('D'), 'Dream ' + props.charChoices[3],]);
-  buttons.push([() => setCurrentTab('E'), 'Eccentricity ' + props.charChoices[4],]);
-  buttons.push([() => setCurrentTab('F'), 'Flaw ' + props.charChoices[5],]);
-  buttons.push([() => setCurrentTab('G'), 'Gear',]);
-  buttons.push([() => setCurrentTab('LU'), 'Level Up',]);
-  buttons.push([() => setCurrentTab('AG'), 'Ability Grid',]);
+  buttons.push([() => {setShowSearchBar(false) ; setCurrentTab('N')}, 'Name',]);
+  buttons.push([() => {setShowSearchBar(true) ; setCurrentTab('A')}, 'Ancestry ' + props.charChoices[0],]);
+  buttons.push([() => {setShowSearchBar(true) ; setCurrentTab('B')}, 'Background ' + props.charChoices[1],]);
+  buttons.push([() => {setShowSearchBar(true) ; setCurrentTab('C')}, 'Culture ' + props.charChoices[2],]);
+  buttons.push([() => {setShowSearchBar(true) ; setCurrentTab('D')}, 'Dream ' + props.charChoices[3],]);
+  buttons.push([() => {setShowSearchBar(true) ; setCurrentTab('E')}, 'Eccentricity ' + props.charChoices[4],]);
+  buttons.push([() => {setShowSearchBar(true) ; setCurrentTab('F')}, 'Flaw ' + props.charChoices[5],]);
+  buttons.push([() => {setShowSearchBar(true) ; setCurrentTab('G')}, 'Gear',]);
+  buttons.push([() => {setShowSearchBar(false) ; setCurrentTab('LU')}, 'Level Up',]);
+  buttons.push([() => {setShowSearchBar(false) ; setCurrentTab('AG')}, 'Ability Grid',]);
 
   return (
     <div>
@@ -38,7 +39,7 @@ function CharacterCreation(props) {
         />
       </div>
       <NavBar buttons={buttons} />
-      <SearchForm setSearchTerm={setSearchTerm} />
+      <SearchForm setSearchTerm={setSearchTerm} appear={showSearchBar}/>
       <CCTab
         currentTab={currentTab}
         statblock={props.statblock}
