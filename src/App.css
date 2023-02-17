@@ -6,12 +6,18 @@
   --colourMid: #04293A;
   --colourLight: #064663;
   --colourAccent: #ECB365;
+
   --colourRed: #bb0000;
   --colourDarkRed: #880000;
-  --colourBlue: #0066cc;
+  --colourPink: #ee5555;
   --colourPurple: #8800bb;
-  --colourGray: #444444;
+  --colourBlue: #0066cc;
   --colourGreen: #006600;
+  --colourYellow: #ccaa00;
+  --colourOrange: #ff8800;
+  --colourDarkGray: #444444;
+  --colourGray: #999999;
+
   --fontFont: 'Share Tech Mono'
 }
 
@@ -42,7 +48,7 @@ body {
 
 .SubDivsAtTop {
   display: inline-block;
-  max-width: calc(20vw + 15px) ;
+  max-width: calc(20vw + 15px);
 }
 
 .Card,
@@ -53,7 +59,7 @@ body {
   border-style: solid;
   border-radius: 12px;
   width: 20vw;
-  margin: 5px;
+  margin: 2px;
 }
 
 .NarrowCard {
@@ -142,12 +148,16 @@ body {
   font-size: small;
 }
 
+.BODY {
+  background-color: var(--colourOrange);
+}
+
 .STAT {
   background-color: var(--colourRed);
 }
 
 .ELMT {
-  background-color: var(--colourPurple);
+  background-color: var(--colourGreen);
 }
 
 .TRNG {
@@ -155,16 +165,22 @@ body {
 }
 
 .GEAR {
-  background-color: var(--colourGreen);
-}
-
-.DEF {
   background-color: var(--colourGray);
 }
 
+.DEF {
+  background-color: var(--colourDarkGray);
+}
+
 .ONSLEEP {
+  background-color: var(--colourPink);
+}
+
+.ONTURN {
   background-color: var(--colourDarkRed);
 }
+
+
 
 /*Controls*/
 .NameSubmit,
@@ -181,7 +197,7 @@ body {
   margin: 5px
 }
 
-.SearchInput{
+.SearchInput {
   min-height: 35px;
   width: 18vw;
 }
@@ -273,7 +289,7 @@ body {
   display: grid;
   column-gap: 5px;
   row-gap: 5px;
-  grid-template-columns: 95px 95px 95px 95px 95px 95px 95px 95px 95px 95px;
+  grid-template-columns: 95px 95px 95px 95px 95px 95px 95px 95px 95px 95px 95px;
 
   padding: 5px;
 

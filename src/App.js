@@ -35,7 +35,7 @@ function App() {
   const [name, setName] = useState('Adventurer');
   const [level, setLevel] = useState(0);
   const [statblock, setStatblock] = useState(getStats(0, 0, 0, 0, 0, 0, [], [], [], [], []));
-  const [defenses, setDefenses] = useState(getDefenses(getStats(0, 0, 0, 0, 0, 0, [], [], [], [], [])));
+  const [defenses, setDefenses] = useState(getDefenses(getStats(0, 0, 0, 0, 0, 0, [], [], [], [], []),[]));
   const [levelUpMessage, setLevelUpMessage] = useState({});
   const [dataMessage, setDataMessage] = useState(null);
 
@@ -47,7 +47,9 @@ function App() {
   }, [ancestry, background, culture, dream, eccentricity, flaw, gear, injuryB, injuryBB, injuryM, injuryMM]);
 
   useEffect(() => {
-    setDefenses(getDefenses(statblock));
+    if (gear !== null) {
+      setDefenses(getDefenses(statblock, gear));
+    }
   }, [statblock]);
 
 
@@ -147,7 +149,7 @@ function App() {
 
   useEffect(() => {
     setStatblock(incrementStat(statblock, levelUpMessage));
-    setDefenses(getDefenses(statblock));
+    setDefenses(getDefenses(statblock, gear));
     setLevel(level + 1);
   }, [levelUpMessage]);
 
