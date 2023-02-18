@@ -55,22 +55,22 @@ function Play(props) {
         <SearchForm setSearchTerm={setSearchTermI} appear={true} />
         {
           allstats.tib.map((tib, index) => (
-            <StatCard key={index} index={index} name={tib.name} statblock={tib} onClick={props.setAddInjuryB} searchTerm={searchTermI} isBig={false} hideNeg={false}/>
+            <StatCard key={index} index={index} name={tib.name} userStat={[props.statblock, props.SecondStat, props.gear]} statblock={tib} onClick={props.setAddInjuryB} searchTerm={searchTermI} isBig={false} hideNeg={false}/>
           ))
         }
         {
           allstats.tibb.map((tibb, index) => (
-            <StatCard key={index} index={index} name={tibb.name} statblock={tibb} onClick={props.setAddInjuryBB} searchTerm={searchTermI} isBig={false} hideNeg={false}/>
+            <StatCard key={index} index={index} name={tibb.name} userStat={[props.statblock, props.SecondStat, props.gear]} statblock={tibb} onClick={props.setAddInjuryBB} searchTerm={searchTermI} isBig={false} hideNeg={false}/>
           ))
         }
         {
           allstats.tim.map((tim, index) => (
-            <StatCard key={index} index={index} name={tim.name} statblock={tim} onClick={props.setAddInjuryM} searchTerm={searchTermI} isBig={false} hideNeg={false}/>
+            <StatCard key={index} index={index} name={tim.name} userStat={[props.statblock, props.SecondStat, props.gear]} statblock={tim} onClick={props.setAddInjuryM} searchTerm={searchTermI} isBig={false} hideNeg={false}/>
           ))
         }
         {
           allstats.timm.map((timm, index) => (
-            <StatCard key={index} index={index} name={timm.name} statblock={timm} onClick={props.setAddInjuryMM} searchTerm={searchTermI} isBig={false} hideNeg={false}/>
+            <StatCard key={index} index={index} name={timm.name} userStat={[props.statblock, props.SecondStat, props.gear]} statblock={timm} onClick={props.setAddInjuryMM} searchTerm={searchTermI} isBig={false} hideNeg={false}/>
           ))
         }
       </div>

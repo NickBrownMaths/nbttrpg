@@ -20,7 +20,7 @@ export class AllStats {
   constructor() {
     this.a.push({ BODY: { Size: 0, Arms: 0, Legs: 0, Wings: 0, Heads: 0, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: [], ONTURN: [], STAT: { str: 0, con: 0, dex: 0, agi: 0, spd: 0, per: 0, int: 0, wis: 0, cha: 0, wpr: 0 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 0, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 0, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 0, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: '' });
     this.a.push({ BODY: { Size: 3, Arms: 2, Legs: 4, Wings: 0, Heads: 1, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: [], ONTURN: [], STAT: { str: 1, con: 2, dex: -1, agi: -1, spd: 2, per: 0, int: -1, wis: 1, cha: 1, wpr: -1 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 0, heat: 0, nature: 1, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 0, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 1, crafting: 0, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'Centaur' });
-    this.a.push({ BODY: { Size: 0, Arms: 0, Legs: 0, Wings: 0, Heads: 0, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: [], ONTURN: [], STAT: { str: 0, con: 1, dex: 0, agi: 0, spd: 0, per: 0, int: 1, wis: 0, cha: 2, wpr: 2 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 0, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 1, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 0, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 1 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'Daemon' });
+    this.a.push({ BODY: { Size: 0, Arms: 2, Legs: 0, Wings: 0, Heads: 0, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: [], ONTURN: [], STAT: { str: 0, con: 1, dex: 0, agi: 0, spd: 0, per: 0, int: 1, wis: 0, cha: 2, wpr: 2 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 0, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 1, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 0, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 1 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'Daemon' });
     this.a.push({ BODY: { Size: 3, Arms: 2, Legs: 2, Wings: 0, Heads: 1, Tails: 0, Teeth: 1, Claws: 1 }, IMMUNES: [], ONSLEEP: [], ONTURN: [], STAT: { str: 2, con: 2, dex: -1, agi: 0, spd: 0, per: 1, int: 0, wis: 0, cha: 1, wpr: 2 }, ELMT: { magic: 1, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 0, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 0, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 0, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'Dragonkin' });
     this.a.push({ BODY: { Size: 3, Arms: 2, Legs: 2, Wings: 0, Heads: 1, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: [], ONTURN: [], STAT: { str: 1, con: 2, dex: 2, agi: -1, spd: 0, per: 1, int: 0, wis: 0, cha: 0, wpr: 1 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 1, air: 0, lightning: 0, cold: 0, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 0, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 1, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'Dwarf' });
     this.a.push({ BODY: { Size: 3, Arms: 2, Legs: 2, Wings: 0, Heads: 1, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: [], ONTURN: [], STAT: { str: 0, con: -1, dex: 2, agi: 1, spd: 1, per: 1, int: 0, wis: 2, cha: 0, wpr: 0 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 0, heat: 0, nature: 1, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 0, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 0, nature: 1, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'Elf' });
@@ -355,16 +355,20 @@ export function getSecondaryStats(statblock, gear) {
   let chase = Math.max(0, statblock.STAT.dex) + Math.max(0, statblock.STAT.agi) + Math.max(0, statblock.STAT.spd) + Math.max(0, statblock.TRNG.athletics);
   let restr = Math.max(0, statblock.STAT.str) + Math.max(0, statblock.STAT.con) + Math.max(0, statblock.STAT.int) + Math.max(0, statblock.TRNG.fighting) + hands * 2;
 
-  let DEFS = {
+  let defs = {
     strike: strik,
     afflict: affli,
     influence: influ,
     conceal: conce,
     chase: chase,
     restrain: restr,
-    hands: hands,
   }
-  return DEFS;
+
+  let body = {
+    HANDS: hands,
+  }
+
+  return { DEFS: defs, BODY: body };
 
 }
 

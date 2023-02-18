@@ -13,7 +13,7 @@ function CCTab(props) {
       <div className="SubDivsInRow">
         {
           allstats.a.map((a, index) => (
-            <StatCard key={index} index={index} name={a.name} statblock={a} onClick={props.setAncestry} searchTerm={props.searchTerm} isBig={true} hideNeg={false} />
+            <StatCard key={index} index={index} name={a.name} userStat={[props.statblock, props.SecondStat, props.gear]} statblock={a} onClick={props.setAncestry} searchTerm={props.searchTerm} isBig={true} hideNeg={false} />
           ))
         }
       </div>
@@ -24,7 +24,7 @@ function CCTab(props) {
       <div className="SubDivsInRow">
         {
           allstats.b.map((b, index) => (
-            <StatCard key={index} index={index} name={b.name} statblock={b} onClick={props.setBackground} searchTerm={props.searchTerm} isBig={true} hideNeg={false} />
+            <StatCard key={index} index={index} name={b.name} userStat={[props.statblock, props.SecondStat, props.gear]} statblock={b} onClick={props.setBackground} searchTerm={props.searchTerm} isBig={true} hideNeg={false} />
           ))
         }
       </div>
@@ -35,7 +35,7 @@ function CCTab(props) {
       <div className="SubDivsInRow">
         {
           allstats.c.map((c, index) => (
-            <StatCard key={index} index={index} name={c.name} statblock={c} onClick={props.setCulture} searchTerm={props.searchTerm} isBig={true} hideNeg={false}/>
+            <StatCard key={index} index={index} name={c.name} userStat={[props.statblock, props.SecondStat, props.gear]} statblock={c} onClick={props.setCulture} searchTerm={props.searchTerm} isBig={true} hideNeg={false} />
           ))
         }
       </div>
@@ -46,7 +46,7 @@ function CCTab(props) {
       <div className="SubDivsInRow">
         {
           allstats.d.map((d, index) => (
-            <StatCard key={index} index={index} name={d.name} statblock={d} onClick={props.setDream} searchTerm={props.searchTerm} isBig={true} hideNeg={false}/>
+            <StatCard key={index} index={index} name={d.name} userStat={[props.statblock, props.SecondStat, props.gear]} statblock={d} onClick={props.setDream} searchTerm={props.searchTerm} isBig={true} hideNeg={false} />
           ))
         }
       </div>
@@ -57,7 +57,7 @@ function CCTab(props) {
       <div className="SubDivsInRow">
         {
           allstats.e.map((e, index) => (
-            <StatCard key={index} index={index} name={e.name} statblock={e} onClick={props.setEccentricity} searchTerm={props.searchTerm} isBig={true} hideNeg={false}/>
+            <StatCard key={index} index={index} name={e.name} userStat={[props.statblock, props.SecondStat, props.gear]} statblock={e} onClick={props.setEccentricity} searchTerm={props.searchTerm} isBig={true} hideNeg={false} />
           ))
         }
       </div>
@@ -68,7 +68,7 @@ function CCTab(props) {
       <div className="SubDivsInRow">
         {
           allstats.f.map((f, index) => (
-            <StatCard key={index} index={index} name={f.name} statblock={f} onClick={props.setFlaw} searchTerm={props.searchTerm} isBig={true} hideNeg={false}/>
+            <StatCard key={index} index={index} name={f.name} userStat={[props.statblock, props.SecondStat, props.gear]} statblock={f} onClick={props.setFlaw} searchTerm={props.searchTerm} isBig={true} hideNeg={false} />
           ))
         }
       </div>
@@ -79,7 +79,7 @@ function CCTab(props) {
       <div className="SubDivsInRow">
         {
           allstats.g.map((g, index) => (
-            <StatCard key={index} index={index} name={g.name} statblock={g} onClick={props.setAddGear} searchTerm={props.searchTerm} isBig={true} hideNeg={false}/>
+            <StatCard key={index} index={index} name={g.name} userStat={[props.statblock, props.SecondStat, props.gear]} statblock={g} onClick={props.setAddGear} searchTerm={props.searchTerm} isBig={true} hideNeg={false} />
           ))
         }
       </div>

@@ -4,7 +4,10 @@ import Statbox from "./Statbox";
 
 function StatCard(props) {
 
-  if (props.searchTerm === '' || props.name.toLowerCase().includes(props.searchTerm.toLowerCase())) {
+  let displayMe = false;
+  if (props.searchTerm === '' || props.name.toLowerCase().includes(props.searchTerm.toLowerCase())) { displayMe = true; }
+
+  if (displayMe) {
     return (
       <button className="NarrowCard ColourLight ColourMidHover" onClick={() => { props.onClick(props.index) }}>
         <div className="NameBox"> {props.name} </div>

@@ -45,8 +45,10 @@ function CharacterCreation(props) {
       <SearchForm setSearchTerm={setSearchTerm} appear={showSearchBar}/>
       <CCTab
         currentTab={currentTab}
+
         statblock={props.statblock}
         secondStat={props.secondStat}
+        
         setAncestry={props.setAncestry}
         setBackground={props.setBackground}
         setCulture={props.setCulture}
@@ -54,8 +56,12 @@ function CharacterCreation(props) {
         setEccentricity={props.setEccentricity}
         setFlaw={props.setFlaw}
         setName={props.setName}
+        
         setLevelUpMessage={props.setLevelUpMessage}
+        
         setAddGear={props.setAddGear}
+        gear={props.gear}
+        
         searchTerm={searchTerm}
       />
     </div>
