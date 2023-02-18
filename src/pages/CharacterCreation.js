@@ -30,7 +30,7 @@ function CharacterCreation(props) {
         <HeroBar
           name={props.name}
           statblock={props.statblock}
-          defenses={props.defenses}
+          secondStat={props.secondStat}
           level={props.level}
           hideNeg={true}
         />
@@ -46,6 +46,7 @@ function CharacterCreation(props) {
       <CCTab
         currentTab={currentTab}
         statblock={props.statblock}
+        secondStat={props.secondStat}
         setAncestry={props.setAncestry}
         setBackground={props.setBackground}
         setCulture={props.setCulture}

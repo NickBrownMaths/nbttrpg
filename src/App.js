@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { AllStats, getDefenses, getStats, incrementStat } from './Utils/AllData';
+import { AllStats, AllTechniques, getSecondaryStats, getStats, incrementStat } from './Utils/AllData';
 import './App.css';
 import NavBar from './components/NavBar';
 import Page from './pages/Page.js';
@@ -35,7 +35,7 @@ function App() {
   const [name, setName] = useState('Adventurer');
   const [level, setLevel] = useState(0);
   const [statblock, setStatblock] = useState(getStats(0, 0, 0, 0, 0, 0, [], [], [], [], []));
-  const [defenses, setDefenses] = useState(getDefenses(getStats(0, 0, 0, 0, 0, 0, [], [], [], [], []),[]));
+  const [secondStat, setSecondStat] = useState(getSecondaryStats(getStats(0, 0, 0, 0, 0, 0, [], [], [], [], []),[]));
   const [levelUpMessage, setLevelUpMessage] = useState({});
   const [dataMessage, setDataMessage] = useState(null);
 
@@ -48,24 +48,14 @@ function App() {
 
   useEffect(() => {
     if (gear !== null) {
-      setDefenses(getDefenses(statblock, gear));
+      setSecondStat(getSecondaryStats(statblock, gear));
     }
   }, [statblock]);
-
-
-
-
-
-
-
-
-
-
 
   useEffect(() => {
     if (addGear !== null) {
       let stats = new AllStats();
-      setGear([...gear, stats.g[addGear]])
+      setGear([...gear, stats.g[addGear]]);
     }
     setAddGear(null);
   }, [addGear]);
@@ -134,22 +124,9 @@ function App() {
     }
   }, [delInjuryB, delInjuryBB, delInjuryM, delInjuryMM]);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
   useEffect(() => {
     setStatblock(incrementStat(statblock, levelUpMessage));
-    setDefenses(getDefenses(statblock, gear));
+    setSecondStat(getSecondaryStats(statblock, gear));
     setLevel(level + 1);
   }, [levelUpMessage]);
 
@@ -183,7 +160,7 @@ function App() {
         currentPage={currentPage}
 
         statblock={statblock}
-        defenses={defenses}
+        secondStat={secondStat}
         level={level}
 
         name={name}

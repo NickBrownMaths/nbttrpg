@@ -19,7 +19,7 @@ function CharacterSave(props) {
           "E": "{props.eccentricity}",
           "F": "{props.flaw}",
           "STATBLOCK": {JSON.stringify(props.statblock)},
-          "DEFENSES": {JSON.stringify(props.defenses)}
+          "SECONDARY": {JSON.stringify(props.secondStat)}
           {"}"}
         </p>
       </div>

@@ -339,7 +339,7 @@ export function incrementStat(statblock, message) {
   return statblock;
 }
 
-export function getDefenses(statblock, gear) {
+export function getSecondaryStats(statblock, gear) {
 
   let hands = statblock.BODY.Arms;
   let gearArmour = 0;
@@ -376,6 +376,32 @@ export class AllTechniques {
   t = [];
 
   constructor() {
-    this.t.push({})
+    this.t.push({ name: "Talk it out", tags: [], defense: '', targetSize: '', ap: 1000, skills: [{ shrinkery: 0 }], traits: [], range: "audible", targets: 1, succTarg: ["Heal Mind Minor"], failTarg: [], succSelf: ["Heal Mind Minor"], failSelf: [], });
+    this.t.push({ name: "Bash", tags: ["Attack"], defense: "strike", targetSize: "+-1", ap: 2, skills: [{ fencing: 0 }], traits: [{ percussion: 1 }], range: 0, targets: 1, succTarg: ["Blunt Trauma"], failTarg: [], succSelf: [], failSelf: ["Unbalanced"], });
+    this.t.push({ name: "Hack", tags: ["Attack"], defense: "strike", targetSize: "+-1", ap: 2, skills: [{ fencing: 1 }], traits: [{ edge: 1 }, { percussion: 2 }], range: 0, targets: 1, succTarg: ["Lacerated", "Blunt Trauma"], failTarg: [], succSelf: [], failSelf: ["Stagger"], });
+    this.t.push({ name: "Slash", tags: ["Attack"], defense: "strike", targetSize: "+-1", ap: 2, skills: [{ fencing: 1 }], traits: [{ edge: 1 }], range: 0, targets: 1, succTarg: ["Lacerated"], failTarg: [], succSelf: [], failSelf: [], });
+    this.t.push({ name: "Thrust", tags: ["Attack"], defense: "strike", targetSize: "+-1", ap: 1, skills: [{ fencing: 2 }], traits: [{ point: 1 }], range: 0, targets: 1, succTarg: ["Punctured"], failTarg: [], succSelf: [], failSelf: [], });
+    this.t.push({ name: "Skewer", tags: ["Attack"], defense: "strike", targetSize: "+-1", ap: 3, skills: [{ fencing: 3 }], traits: [{ spike: 1 }], range: 0, targets: 1, succTarg: ["Punctured"], failTarg: [], succSelf: [], failSelf: [], });
+    this.t.push({ name: "Fend", tags: ["Attack"], defense: "strike", targetSize: "+-1", ap: 2, skills: [{ fencing: 1 }], traits: [{ length: 3 }], range: 0, targets: 1, succTarg: ["Unbalanced"], failTarg: [], succSelf: [], failSelf: [], });
+    this.t.push({ name: "Punch", tags: ["Attack"], defense: "strike", targetSize: "+-1", ap: 1, skills: [{ unarmed: 0 }], traits: [], range: 0, targets: 1, succTarg: ["Unbalanced"], failTarg: [], succSelf: [], failSelf: [], });
+    this.t.push({ name: "Imbue Flame", tags: ["Imbue Attack"], defense: "afflict", targetSize: "<= + 1", ap: 1, skills: [{ fire: 1 }], traits: [], range: 0, targets: 1, succTarg: ["Burnt"], failTarg: [], succSelf: [], failSelf: [], });
+    this.t.push({ name: "Imbue Lightning", tags: ["Imbue Attack"], defense: "afflict", targetSize: "<= + 1", ap: 1, skills: [{ lightning: 1 }], traits: [], range: 0, targets: 1, succTarg: ["Shocked"], failTarg: [], succSelf: [], failSelf: [], });
+    this.t.push({ name: "Imbue Cytopoison", tags: ["Imbue Attack"], defense: "afflict", targetSize: "<= + 1", ap: 1, skills: [{ toxic: 2 }], traits: [], range: 0, targets: 1, succTarg: ["Cytopoisoned"], failTarg: [], succSelf: [], failSelf: [], });
+    this.t.push({ name: "Imbue Hemopoison", tags: ["Imbue Attack"], defense: "afflict", targetSize: "<= + 1", ap: 1, skills: [{ toxic: 3 }], traits: [], range: 0, targets: 1, succTarg: ["Hemopoisoned"], failTarg: [], succSelf: [], failSelf: [], });
+    this.t.push({ name: "Imbue Neuropoison", tags: ["Imbue Attack"], defense: "afflict", targetSize: "<= + 1", ap: 1, skills: [{ toxic: 4 }], traits: [], range: 0, targets: 1, succTarg: ["Neuropoisoned"], failTarg: [], succSelf: [], failSelf: [], });
+    this.t.push({ name: "Kick", tags: ["Attack"], defense: "strike", targetSize: "+-1", ap: 2, skills: [{ unarmed: 1 }], traits: [], range: 0, targets: 1, succTarg: ["Stagger"], failTarg: [], succSelf: [], failSelf: [], });
+    this.t.push({ name: "Stomp", tags: ["Attack"], defense: "strike", targetSize: "<= + 1", ap: 2, skills: [{ unarmed: 0 }], traits: [], range: 0, targets: 1, succTarg: ["Unbalanced"], failTarg: [], succSelf: [], failSelf: [], });
+    this.t.push({ name: "Stamp", tags: ["Attack"], defense: "strike", targetSize: "< -1", ap: 2, skills: [{ unarmed: 0 }], traits: [], range: 0, targets: 1, succTarg: ["Unbalanced"], failTarg: [], succSelf: [], failSelf: [], });
+    this.t.push({ name: "Shove", tags: ["Attack"], defense: "restrain", targetSize: "<= + 1", ap: 2, skills: [{ grappling: 0 }], traits: [], range: 0, targets: 1, succTarg: ["Unbalanced"], failTarg: [], succSelf: [], failSelf: [], });
+    this.t.push({ name: "Clinch", tags: ["Attack"], defense: "restrain", targetSize: "<= + 1", ap: 3, skills: [{ grappling: 1 }], traits: [], range: 0, targets: 1, succTarg: ["Clinched"], failTarg: [], succSelf: [], failSelf: [], });
+    this.t.push({ name: "Tackle", tags: ["Attack"], defense: "restrain", targetSize: "<= + 1", ap: 4, skills: [{ grappling: 2 }], traits: [], range: 0, targets: 1, succTarg: ["Supine"], failTarg: [], succSelf: ["Prone"], failSelf: ["Stagger"], });
+    this.t.push({ name: "Trip", tags: ["Attack"], defense: "restrain", targetSize: "<= + 1", ap: 2, skills: [{ grappling: 3 }], traits: [], range: 0, targets: 1, succTarg: ["Prone"], failTarg: [], succSelf: [], failSelf: ["Unbalanced"], });
+    this.t.push({ name: "Throw", tags: ["Attack"], defense: "restrain", targetSize: "<= + 1", ap: 4, skills: [{ grappling: 4 }], traits: [], range: 0, targets: 1, succTarg: ["Supine", "Blunt Trauma"], failTarg: [], succSelf: [], failSelf: [], });
+    this.t.push({ name: "Wrestle", tags: ["Attack"], defense: "restrain", targetSize: "<= + 1", ap: 4, skills: [{ grappling: 4 }], traits: [], range: 0, targets: 1, succTarg: ["Submitted"], failTarg: [], succSelf: ["Prone"], failSelf: ["Supine"], });
+    this.t.push({ name: "Jab", tags: ["Attack"], defense: "strike", targetSize: "+-1", ap: 1, skills: [{ unarmed: 3 }, { focus: 1 }], traits: [], range: 0, targets: 1, succTarg: ["Unbalanced"], failTarg: [], succSelf: [], failSelf: [], });
+    this.t.push({ name: "Cross", tags: ["Attack"], defense: "strike", targetSize: "+-1", ap: 1, skills: [{ unarmed: 3 }, { focus: 2 }], traits: [], range: 0, targets: 1, succTarg: ["Stagger"], failTarg: [], succSelf: [], failSelf: [], });
+    this.t.push({ name: "Hook", tags: ["Attack"], defense: "strike", targetSize: "+-1", ap: 2, skills: [{ unarmed: 3 }, { focus: 3 }], traits: [], range: 0, targets: 1, succTarg: ["Stagger", "Exerted"], failTarg: [], succSelf: [], failSelf: [], });
+    this.t.push({ name: "Uppercut", tags: ["Attack"], defense: "strike", targetSize: "+-1", ap: 2, skills: [{ unarmed: 3 }, { focus: 3 }], traits: [], range: 0, targets: 1, succTarg: ["Blunt Trauma", "Exerted"], failTarg: [], succSelf: [], failSelf: [], });
+    this.t.push({ name: "Get Up", tags: ["Attack"], defense: '', targetSize: '', ap: 3, skills: [{ acrobatics: 0 }], traits: [], range: "self", targets: "self", succTarg: [], failTarg: [], succSelf: [], failSelf: [], });
   }
 }

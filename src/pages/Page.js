@@ -9,7 +9,7 @@ function Page(props) {
       name={props.name}
       setName={props.setName}
       statblock={props.statblock}
-      defenses={props.defenses}
+      secondStat={props.secondStat}
       level={props.level}
 
       setAncestry={props.setAncestry}
@@ -42,7 +42,7 @@ function Page(props) {
       <CharacterSave
         name={props.name}
         statblock={props.statblock}
-        defenses={props.defenses}
+        secondStat={props.secondStat}
         level={props.level}
         ancestry={props.ancestry}
         background={props.background}
@@ -57,7 +57,7 @@ function Page(props) {
     return <Play
       name={props.name}
       statblock={props.statblock}
-      defenses={props.defenses}
+      secondStat={props.secondStat}
       level={props.level}
       gear={props.gear}
       setDelGear={props.setDelGear}

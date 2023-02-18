@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { AllStats } from "../Utils/AllData";
+import { AllStats, AllTechniques } from "../Utils/AllData";
 
 import ClickBar from "../components/ClickBar";
 import HeroBar from "../components/HeroBar";
 import SearchForm from "../components/SearchForm";
 import StatCard from "../components/StatCard";
+import TechCard from "../components/TechCard";
 
 function Play(props) {
 
@@ -12,14 +13,15 @@ function Play(props) {
   const [searchTermT, setSearchTermT] = useState('');
 
   let allstats = new AllStats();
-
+  let allTechs = new AllTechniques();
+  
   return (
     <div className="SubDivsInRow" >
       <div className="SubDivsInCol SubDivsAtTop">
         <HeroBar
           name={props.name}
           statblock={props.statblock}
-          defenses={props.defenses}
+          secondStat={props.secondStat}
           level={props.level}
           hideNeg={true}
         />
@@ -74,7 +76,11 @@ function Play(props) {
       </div>
       <div className="Card GEAR MediumWideCard">
         <SearchForm setSearchTerm={setSearchTermT} appear={true} />
-        This area will contain: Searchable list of techniques. These will include techs which impart stances.
+        {
+          allTechs.t.map((t, index) => (
+            <TechCard key={index} index={index} name={t.name} t={t} searchTerm={searchTermT} />
+          ))
+        }
       </div>
     </div>
   )

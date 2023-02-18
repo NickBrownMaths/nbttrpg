@@ -53,6 +53,7 @@ body {
 
 .Card,
 .WideCard,
+.TechCard,
 .NarrowCard {
   font-family: var(--fontFont);
   display: inline-block;
@@ -72,6 +73,10 @@ body {
 
 .WideCard {
   width: 70vw;
+}
+
+.TechCard {
+  width: 43vw;
 }
 
 .ColourDark {
