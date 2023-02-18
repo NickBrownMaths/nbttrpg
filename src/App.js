@@ -35,7 +35,7 @@ function App() {
   const [name, setName] = useState('Adventurer');
   const [level, setLevel] = useState(0);
   const [statblock, setStatblock] = useState(getStats(0, 0, 0, 0, 0, 0, [], [], [], [], []));
-  const [secondStat, setSecondStat] = useState(getSecondaryStats(getStats(0, 0, 0, 0, 0, 0, [], [], [], [], []),[]));
+  const [secondStat, setSecondStat] = useState(getSecondaryStats(getStats(0, 0, 0, 0, 0, 0, [], [], [], [], []), []));
   const [levelUpMessage, setLevelUpMessage] = useState({});
   const [dataMessage, setDataMessage] = useState(null);
 
@@ -55,7 +55,19 @@ function App() {
   useEffect(() => {
     if (addGear !== null) {
       let stats = new AllStats();
-      setGear([...gear, stats.g[addGear]]);
+
+      let validAddGear = true;
+      if (stats.g[addGear].GEAR.armour > 0) {
+        for (let i = 0; i < gear.length; i++) {
+          if (gear[i].GEAR.armour > 0) { validAddGear = false; i = gear.length + 1 }
+        }
+      }
+
+      if (stats.g[addGear].GEAR.haft > 0) {
+        if (secondStat.BODY.HANDS < 1) { validAddGear = false; }
+      }
+
+      if (validAddGear) { setGear([...gear, stats.g[addGear]]); }
     }
     setAddGear(null);
   }, [addGear]);

@@ -348,6 +348,19 @@ export function getSecondaryStats(statblock, gear) {
     if (gear[i].GEAR.haft > 0 && hands > 0) { hands--; }
   }
 
+  let ap = 1 + Math.max(
+    statblock.STAT.str,
+    statblock.STAT.con,
+    statblock.STAT.dex,
+    statblock.STAT.agi,
+    statblock.STAT.spd,
+    statblock.STAT.per,
+    statblock.STAT.int,
+    statblock.STAT.wis,
+    statblock.STAT.cha,
+    statblock.STAT.wpr,
+     ) ;
+
   let strik = Math.max(0, statblock.STAT.con) + Math.max(0, statblock.STAT.agi) + Math.max(0, statblock.STAT.wis) + gearArmour;
   let affli = Math.max(0, statblock.STAT.str) + Math.max(0, statblock.STAT.con) + Math.max(0, statblock.STAT.agi) + gearArmour;
   let influ = Math.max(0, statblock.STAT.int) + Math.max(0, statblock.STAT.wis) + Math.max(0, statblock.STAT.cha) + Math.max(0, statblock.TRNG.diplomacy);
@@ -365,7 +378,7 @@ export function getSecondaryStats(statblock, gear) {
   }
 
   let body = {
-    HANDS: hands,
+    hands: hands, AP: ap
   }
 
   return { DEFS: defs, BODY: body };

@@ -31,6 +31,11 @@ function HeroBar(props) {
               <Statbox key={index} stat={props.secondStat.DEFS[objKey]} statlabel={objKey} statType='DEF' isBig={true} hideNeg={props.hideNeg}/>
             ))
           }
+          {
+            Object.keys(props.secondStat.BODY).map((objKey, index) => (
+              <Statbox key={index} stat={props.secondStat.BODY[objKey]} statlabel={objKey} statType='GEAR' isBig={true} hideNeg={props.hideNeg}/>
+            ))
+          }
         </div>
       </div>
     </div>
