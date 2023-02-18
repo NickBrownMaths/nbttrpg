@@ -55,6 +55,54 @@ function TechCard(props) {
     }
   }
 
+  let rangeText = '';
+  if (props.t.range !== '') {
+    rangeText = rangeText + 'Range: ' + props.t.range;
+  }
+
+  let targetsText = '';
+  if (props.t.targets !== '') {
+    targetsText = targetsText + 'Targets: ' + props.t.targets;
+  }
+
+  let succTargText = '';
+  if (props.t.succTarg.length > 0) {
+    succTargText = succTargText + 'On hit(target): ';
+    for (let i = 0; i < props.t.succTarg.length; i++) {
+      if (i > 0) { succTargText = succTargText + ', ' };
+      succTargText = succTargText + props.t.succTarg[i];
+    }
+  }
+
+  let failTargText = '';
+  if (props.t.failTarg.length > 0) {
+    failTargText = failTargText + 'On miss(target): ';
+    for (let i = 0; i < props.t.failTarg.length; i++) {
+      if (i > 0) { failTargText = failTargText + ', ' };
+      failTargText = failTargText + props.t.failTarg[i];
+    }
+  }
+
+  let succSelfText = '';
+  if (props.t.succSelf.length > 0) {
+    succSelfText = succSelfText + 'On hit(self): ';
+    for (let i = 0; i < props.t.succSelf.length; i++) {
+      if (i > 0) { succSelfText = succSelfText + ', ' };
+      succSelfText = succSelfText + props.t.succSelf[i];
+    }
+  }
+
+  let failSelfText = '';
+  if (props.t.failSelf.length > 0) {
+    failSelfText = failSelfText + 'On miss(self): ';
+    for (let i = 0; i < props.t.failSelf.length; i++) {
+      if (i > 0) { failSelfText = failSelfText + ', ' };
+      failSelfText = failSelfText + props.t.failSelf[i];
+    }
+  }
+
+
+
 
   if (props.searchTerm === '' || props.name.toLowerCase().includes(props.searchTerm.toLowerCase())) {
     return (
@@ -70,6 +118,19 @@ function TechCard(props) {
           {skillsText}
           {(skillsText === '') ? '' : <br />}
           {traitsText}
+          {(traitsText === '') ? '' : <br />}
+          {rangeText}
+          {(rangeText === '') ? '' : <br />}
+          {targetsText}
+          {(targetsText === '') ? '' : <br />}
+          {succSelfText}
+          {(succSelfText === '') ? '' : <br />}
+          {succTargText}
+          {(succTargText === '') ? '' : <br />}
+          {failSelfText}
+          {(failSelfText === '') ? '' : <br />}
+          {failTargText}
+          {(failTargText === '') ? '' : <br />}
         </div>
       </button>
     )
