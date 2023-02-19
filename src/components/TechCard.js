@@ -4,15 +4,26 @@ import Statbox from "./Statbox";
 
 function TechCard(props) {
   let displayMe = false;
+  let skillsBonus = [];
+  let gearBonus = 0;
+  let activeGear = ''
   if (props.searchTerm === '' || props.name.toLowerCase().includes(props.searchTerm.toLowerCase())) { displayMe = true; }
+  if (props.t.fh > props.userStat[1].BODY.hands) { displayMe = false; }
   if (displayMe === true) {
     if (props.t.skills.length > 0) {
       for (let i = 0; i < props.t.skills.length; i++) {
+        let SBi = 0;
         {
           Object.keys(props.t.skills[i]).map((objKey, idx) => (
             displayMe = ((props.t.skills[i][objKey] > props.userAbl[objKey]) ? false : displayMe)
           ))
         }
+        {
+          Object.keys(props.t.skills[i]).map((objKey, idx) => (
+            SBi += props.userAbl[objKey] - props.t.skills[i][objKey]
+          ))
+        }
+        skillsBonus.push(SBi);
       }
     }
   }
@@ -21,17 +32,32 @@ function TechCard(props) {
       displayMe = false;
       for (let gearIdx = 0; gearIdx < props.userGear.length; gearIdx++) {
         let thisGearGood = 0;
+        let thisGearBonus = 0;
         for (let traitIdx = 0; traitIdx < props.t.traits.length; traitIdx++) {
           {
             Object.keys(props.t.traits[traitIdx]).map((objKey) => (
               thisGearGood += ((props.t.traits[traitIdx][objKey] <= props.userGear[gearIdx].GEAR[objKey]) ? 1 : 0)
             ))
           }
+          {
+            Object.keys(props.t.traits[traitIdx]).map((objKey) => (
+              thisGearBonus += props.userGear[gearIdx].GEAR[objKey] - props.t.traits[traitIdx][objKey]
+            ))
+          }
+          if (thisGearGood >= props.t.traits.length) {
+            displayMe = true;
+            if (gearBonus < thisGearBonus) {
+              gearBonus = thisGearBonus;
+              activeGear = props.userGear[gearIdx].name;
+            }
+          }
         }
-        if (thisGearGood >= props.t.traits.length) { displayMe = true; }
       }
     }
   }
+
+
+
 
   if (displayMe) {
 
@@ -53,6 +79,12 @@ function TechCard(props) {
     if (props.t.targetSize !== '') {
       targetSizeText = targetSizeText + 'Target size: ' + props.t.targetSize;
     }
+    let freeHandText = '';
+    if (props.t.fh !== 0) {
+      freeHandText = freeHandText + 'Free Hand';
+      if (props.t.fh > 1) { freeHandText = freeHandText + 's' }
+      freeHandText = freeHandText + ': ' + props.t.fh;
+    }
     let skillsText = ''
     if (props.t.skills.length > 0) {
       skillsText = skillsText + 'Skill';
@@ -62,7 +94,7 @@ function TechCard(props) {
         if (i > 0) { skillsText = skillsText + ', ' };
         {
           Object.keys(props.t.skills[i]).map((objKey, idx) => (
-            skillsText = skillsText + objKey + " (" + props.userAbl[objKey] + "/" + props.t.skills[i][objKey] + ")"
+            skillsText = skillsText + objKey + " (" + props.t.skills[i][objKey] + ")"
           ))
         }
       }
@@ -121,21 +153,26 @@ function TechCard(props) {
         failSelfText = failSelfText + props.t.failSelf[i];
       }
     }
+    let rollsText = ''
+    let bonus = 10000000;
+    if (props.t.defense !== '') {
+      for (let i = 0; i < props.t.skills.length; i++) {
+        if (skillsBonus[i] + gearBonus < bonus) { bonus = skillsBonus[i] + gearBonus; }
+      }
+      rollsText = rollsText + "D20+" + bonus + " vs " + props.t.defense + " defense";
+    }
+    if (bonus === 10000000) { bonus = 0; }
 
     return (
-      <button className="Card" onClick={() => { console.log('hello') }}>
+      <button className="Card" onClick={() => { let D20roll = Math.ceil(Math.random() * 20); alert('You rolled a ' + D20roll + " for a total of " + (D20roll + bonus)) }}>
         <div className="NameBox"> {props.name} </div>
         <div className="Techbar">
           {tagText}
           {(tagText === '') ? '' : <br />}
-          {defenseText}
-          {(defenseText === '') ? '' : <br />}
           {targetSizeText}
           {(targetSizeText === '') ? '' : <br />}
-          {skillsText}
-          {(skillsText === '') ? '' : <br />}
-          {traitsText}
-          {(traitsText === '') ? '' : <br />}
+          {freeHandText}
+          {(freeHandText === '') ? '' : <br />}
           {rangeText}
           {(rangeText === '') ? '' : <br />}
           {targetsText}
@@ -148,6 +185,11 @@ function TechCard(props) {
           {(failSelfText === '') ? '' : <br />}
           {failTargText}
           {(failTargText === '') ? '' : <br />}
+          {skillsText}
+          {(skillsText === '') ? '' : <br />}
+          {traitsText}
+          {(traitsText === '') ? '' : <br />}
+          {rollsText}
         </div>
       </button>
     )

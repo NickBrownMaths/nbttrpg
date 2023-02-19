@@ -13,6 +13,11 @@ function StatCard(props) {
         <div className="NameBox"> {props.name} </div>
         <div className="Statbar">
           {
+            Object.keys(props.statblock.BODY).map((objKey, index) => (
+              <Statbox key={index} stat={props.statblock.BODY[objKey]} statlabel={objKey} statType='BODY' isBig={props.isBig} hideNeg={props.hideNeg} />
+            ))
+          }
+          {
             Object.keys(props.statblock.STAT).map((objKey, index) => (
               <Statbox key={index} stat={props.statblock.STAT[objKey]} statlabel={objKey} statType='STAT' isBig={props.isBig} hideNeg={props.hideNeg} />
             ))
