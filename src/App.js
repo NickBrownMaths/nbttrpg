@@ -7,6 +7,8 @@ import Page from './pages/Page.js';
 function App() {
   const [currentPage, setCurrentPage] = useState('CC');
 
+  const [allStats, setAllstats] = useState(new AllStats());
+
   const [ancestry, setAncestry] = useState(0);
   const [background, setBackground] = useState(0);
   const [culture, setCulture] = useState(0);
@@ -32,19 +34,21 @@ function App() {
   const [addInjuryMM, setAddInjuryMM] = useState(null);
   const [delInjuryMM, setDelInjuryMM] = useState(null);
 
+  const [stance, setStance] = useState(0);
+  const [delStance, setDelStance] = useState(null);
+
   const [name, setName] = useState('Adventurer');
   const [level, setLevel] = useState(0);
-  const [statblock, setStatblock] = useState(getStats(0, 0, 0, 0, 0, 0, [], [], [], [], []));
-  const [secondStat, setSecondStat] = useState(getSecondaryStats(getStats(0, 0, 0, 0, 0, 0, [], [], [], [], []), []));
+  const [statblock, setStatblock] = useState(getStats(0, 0, 0, 0, 0, 0, [], [], [], [], [], 0));
+  const [secondStat, setSecondStat] = useState(getSecondaryStats(getStats(0, 0, 0, 0, 0, 0, [], [], [], [], [], 0), []));
   const [levelUpMessage, setLevelUpMessage] = useState({});
   const [dataMessage, setDataMessage] = useState(null);
 
   useEffect(() => {
-    setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw, gear, injuryB, injuryBB, injuryM, injuryMM));
+    setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw, gear, injuryB, injuryBB, injuryM, injuryMM, stance));
     setLevel(1);
-    let data = new AllStats();
-    setCharChoices([data.a[ancestry].name, data.b[background].name, data.c[culture].name, data.d[dream].name, data.e[eccentricity].name, data.f[flaw].name]);
-  }, [ancestry, background, culture, dream, eccentricity, flaw, gear, injuryB, injuryBB, injuryM, injuryMM]);
+    setCharChoices([allStats.a[ancestry].name, allStats.b[background].name, allStats.c[culture].name, allStats.d[dream].name, allStats.e[eccentricity].name, allStats.f[flaw].name]);
+  }, [ancestry, background, culture, dream, eccentricity, flaw, gear, injuryB, injuryBB, injuryM, injuryMM, stance]);
 
   useEffect(() => {
     if (gear !== null) {
@@ -54,20 +58,18 @@ function App() {
 
   useEffect(() => {
     if (addGear !== null) {
-      let stats = new AllStats();
-
       let validAddGear = true;
-      if (stats.g[addGear].GEAR.armour > 0) {
+      if (allStats.g[addGear].GEAR.armour > 0) {
         for (let i = 0; i < gear.length; i++) {
           if (gear[i].GEAR.armour > 0) { validAddGear = false; i = gear.length + 1 }
         }
       }
 
-      if (stats.g[addGear].GEAR.haft > 0) {
-        if (secondStat.BODY.HANDS < 1) { validAddGear = false; }
+      if (allStats.g[addGear].GEAR.haft > 0) {
+        if (secondStat.BODY.hands < 1) { validAddGear = false; }
       }
 
-      if (validAddGear) { setGear([...gear, stats.g[addGear]]); }
+      if (validAddGear) { setGear([...gear, allStats.g[addGear]]); }
     }
     setAddGear(null);
   }, [addGear]);
@@ -77,30 +79,26 @@ function App() {
       let newGear = gear;
       let removedGear = newGear.splice(delGear, 1);
       setGear(newGear);
-      setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw, newGear, injuryB, injuryBB, injuryM, injuryMM));
+      setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw, newGear, injuryB, injuryBB, injuryM, injuryMM, stance));
       setDelGear(null);
     }
   }, [delGear]);
 
   useEffect(() => {
     if (addInjuryB !== null) {
-      let stats = new AllStats();
-      setInjuryB([...injuryB, stats.tib[addInjuryB]])
+      setInjuryB([...injuryB, allStats.tib[addInjuryB]])
       setAddInjuryB(null);
     }
     if (addInjuryBB !== null) {
-      let stats = new AllStats();
-      setInjuryBB([...injuryBB, stats.tibb[addInjuryBB]])
+      setInjuryBB([...injuryBB, allStats.tibb[addInjuryBB]])
       setAddInjuryBB(null);
     }
     if (addInjuryM !== null) {
-      let stats = new AllStats();
-      setInjuryM([...injuryM, stats.tim[addInjuryM]])
+      setInjuryM([...injuryM, allStats.tim[addInjuryM]])
       setAddInjuryM(null);
     }
     if (addInjuryMM !== null) {
-      let stats = new AllStats();
-      setInjuryMM([...injuryMM, stats.timm[addInjuryMM]])
+      setInjuryMM([...injuryMM, allStats.timm[addInjuryMM]])
       setAddInjuryMM(null);
     }
   }, [addInjuryB, addInjuryBB, addInjuryM, addInjuryMM]);
@@ -110,28 +108,28 @@ function App() {
       let newInjuryB = injuryB;
       let removedIB = newInjuryB.splice(delInjuryB, 1);
       setInjuryB(newInjuryB);
-      setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw, gear, newInjuryB, injuryBB, injuryM, injuryMM));
+      setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw, gear, newInjuryB, injuryBB, injuryM, injuryMM, stance));
       setDelInjuryB(null);
     }
     if (delInjuryBB !== null) {
       let newInjuryBB = injuryBB;
       let removedIBB = newInjuryBB.splice(delInjuryBB, 1);
       setInjuryBB(newInjuryBB);
-      setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw, gear, injuryB, newInjuryBB, injuryM, injuryMM));
+      setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw, gear, injuryB, newInjuryBB, injuryM, injuryMM, stance));
       setDelInjuryBB(null);
     }
     if (delInjuryM !== null) {
       let newInjuryM = injuryM;
       let removedIM = newInjuryM.splice(delInjuryM, 1);
       setInjuryM(newInjuryM);
-      setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw, gear, injuryB, injuryBB, newInjuryM, injuryMM));
+      setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw, gear, injuryB, injuryBB, newInjuryM, injuryMM, stance));
       setDelInjuryM(null);
     }
     if (delInjuryMM !== null) {
       let newInjuryMM = injuryMM;
       let removedIMM = newInjuryMM.splice(delInjuryMM, 1);
       setInjuryMM(newInjuryMM);
-      setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw, gear, injuryB, injuryBB, injuryM, newInjuryMM));
+      setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw, gear, injuryB, injuryBB, injuryM, newInjuryMM, stance));
       setDelInjuryMM(null);
     }
   }, [delInjuryB, delInjuryBB, delInjuryM, delInjuryMM]);
@@ -194,14 +192,17 @@ function App() {
         charChoices={charChoices}
         setLevelUpMessage={setLevelUpMessage}
         setDataMessage={setDataMessage}
+
         gear={gear}
         setAddGear={setAddGear}
         setDelGear={setDelGear}
+
         injuryB={injuryB} setAddInjuryB={setAddInjuryB} setDelInjuryB={setDelInjuryB}
         injuryBB={injuryBB} setAddInjuryBB={setAddInjuryBB} setDelInjuryBB={setDelInjuryBB}
         injuryM={injuryM} setAddInjuryM={setAddInjuryM} setDelInjuryM={setDelInjuryM}
         injuryMM={injuryMM} setAddInjuryMM={setAddInjuryMM} setDelInjuryMM={setDelInjuryMM}
 
+        stance={stance} setStance={setStance} setDelStance={setDelStance} stanceData={allStats.ts[stance]}
       />
     </div>
   );

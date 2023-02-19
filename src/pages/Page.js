@@ -27,7 +27,7 @@ function Page(props) {
       charChoices={props.charChoices}
 
       setLevelUpMessage={props.setLevelUpMessage}
-      
+
       setAddGear={props.setAddGear}
       gear={props.gear}
       setDelGear={props.setDelGear}
@@ -67,6 +67,7 @@ function Page(props) {
       injuryBB={props.injuryBB} setAddInjuryBB={props.setAddInjuryBB} setDelInjuryBB={props.setDelInjuryBB}
       injuryM={props.injuryM} setAddInjuryM={props.setAddInjuryM} setDelInjuryM={props.setDelInjuryM}
       injuryMM={props.injuryMM} setAddInjuryMM={props.setAddInjuryMM} setDelInjuryMM={props.setDelInjuryMM}
+      stance={props.stance} setStance={props.setStance} setDelStance={props.setDelStance} stanceData={props.stanceData}
     />
   }
 }

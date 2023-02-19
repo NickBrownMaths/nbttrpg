@@ -13,7 +13,6 @@ export class AllStats {
   timm = [];
 
   ts = [];
-  tss = [];
 
   z = [];
 
@@ -110,7 +109,7 @@ export class AllStats {
     this.d.push({ BODY: { Size: 0, Arms: 0, Legs: 0, Wings: 0, Heads: 0, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: [], ONTURN: [], STAT: { str: 0, con: 0, dex: 0, agi: 0, spd: 0, per: 1, int: 1, wis: 0, cha: 0, wpr: 0 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 0, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 0, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 1, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'Wealth' });
     this.e.push({ BODY: { Size: 0, Arms: 0, Legs: 0, Wings: 0, Heads: 0, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: [], ONTURN: [], STAT: { str: 0, con: 0, dex: 0, agi: 0, spd: 0, per: 0, int: 0, wis: 0, cha: 0, wpr: 0 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 0, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 0, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 0, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: '' });
     this.e.push({ BODY: { Size: 0, Arms: 0, Legs: 0, Wings: 0, Heads: 0, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: [], ONTURN: [], STAT: { str: 0, con: 0, dex: 0, agi: 0, spd: 0, per: 0, int: 0, wis: 0, cha: 0, wpr: 0 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 1, lightning: 0, cold: 0, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 0, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 0, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'Aeronaut' });
-    this.e.push({ BODY: { Size: 0, Arms: 0, Legs: 0, Wings: 0, Heads: 0, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: [], ONTURN: [], STAT: { str: 0, con: 0, dex: 0, agi: 0, spd: 0, per: 0, int: 0, wis: 0, cha: 0, wpr: 0 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 0, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 0, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 0, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 1, point: 0, spike: 1, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'Bestial' });
+    this.e.push({ BODY: { Size: 0, Arms: 0, Legs: 0, Wings: 0, Heads: 0, Tails: 0, Teeth: 1, Claws: 1 }, IMMUNES: [], ONSLEEP: [], ONTURN: [], STAT: { str: 0, con: 0, dex: 0, agi: 0, spd: 0, per: 0, int: 0, wis: 0, cha: 0, wpr: 0 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 0, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 0, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 0, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'Bestial' });
     this.e.push({ BODY: { Size: 0, Arms: 0, Legs: 0, Wings: 0, Heads: 0, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: [], ONTURN: [], STAT: { str: 0, con: 0, dex: 0, agi: 0, spd: 0, per: 0, int: 0, wis: 0, cha: 0, wpr: 0 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 0, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 1, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 0, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'Blasphemous' });
     this.e.push({ BODY: { Size: 0, Arms: 0, Legs: 0, Wings: 0, Heads: 0, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: [], ONTURN: [], STAT: { str: 0, con: 0, dex: 0, agi: 0, spd: 0, per: 0, int: 0, wis: 0, cha: 0, wpr: 0 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 0, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 1, caustic: 1, holy: 0, profane: 0, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 0, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'Chemist' });
     this.e.push({ BODY: { Size: 0, Arms: 0, Legs: 0, Wings: 0, Heads: 0, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: [], ONTURN: [], STAT: { str: 0, con: 0, dex: 0, agi: 0, spd: 0, per: 0, int: 0, wis: 0, cha: 0, wpr: 0 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 1, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 0, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 0, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'Coldblood' });
@@ -239,6 +238,7 @@ export class AllStats {
     this.timm.push({ BODY: { Size: 0, Arms: 0, Legs: 0, Wings: 0, Heads: 0, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: ["Humiliated"], ONTURN: [], STAT: { str: 0, con: 0, dex: 0, agi: 0, spd: 0, per: 0, int: 0, wis: 0, cha: 0, wpr: 0 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 0, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 0, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 0, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'Shame' });
     this.timm.push({ BODY: { Size: 0, Arms: 0, Legs: 0, Wings: 0, Heads: 0, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: ["Horrified"], ONTURN: [], STAT: { str: 0, con: 0, dex: 0, agi: 0, spd: 0, per: 0, int: 0, wis: 0, cha: 0, wpr: 0 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 0, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 0, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 0, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'Trauma' });
     this.timm.push({ BODY: { Size: 0, Arms: 0, Legs: 0, Wings: 0, Heads: 0, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: ["Angry"], ONTURN: [], STAT: { str: 0, con: 0, dex: 0, agi: 0, spd: 0, per: 0, int: 0, wis: 0, cha: 0, wpr: 0 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 0, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 0, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 0, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'Volatility' });
+    this.ts.push({ BODY: { Size: 0, Arms: 0, Legs: 0, Wings: 0, Heads: 0, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: [], ONTURN: [], STAT: { str: 0, con: 0, dex: 0, agi: 0, spd: 0, per: 0, int: 0, wis: 0, cha: 0, wpr: 0 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 0, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 0, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 0, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'Upright Stance' });
     this.ts.push({ BODY: { Size: 0, Arms: 0, Legs: 0, Wings: 0, Heads: 0, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: [], ONTURN: [], STAT: { str: 0, con: 0, dex: 0, agi: 0, spd: 0, per: 0, int: 0, wis: 0, cha: 0, wpr: 0 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 0, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 0, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 0, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'Boxing Stance' });
     this.ts.push({ BODY: { Size: 0, Arms: 0, Legs: 0, Wings: 0, Heads: 0, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: [], ONTURN: [], STAT: { str: 0, con: 0, dex: 0, agi: 0, spd: 0, per: 0, int: 0, wis: 0, cha: 0, wpr: 0 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 0, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 0, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 0, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'Drunkards sway' });
     this.ts.push({ BODY: { Size: 0, Arms: 0, Legs: 0, Wings: 0, Heads: 0, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: [], ONTURN: [], STAT: { str: 0, con: 0, dex: 0, agi: 0, spd: 0, per: 0, int: 0, wis: 0, cha: 0, wpr: 0 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 0, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 0, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 0, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'Horse stance' });
@@ -249,7 +249,6 @@ export class AllStats {
     this.ts.push({ BODY: { Size: 0, Arms: 0, Legs: 0, Wings: 0, Heads: 0, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: [], ONTURN: [], STAT: { str: -2, con: 0, dex: -2, agi: -4, spd: -4, per: 0, int: 0, wis: 0, cha: 0, wpr: -4 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 0, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 0, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 0, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'Submitted' });
     this.ts.push({ BODY: { Size: 0, Arms: 0, Legs: 0, Wings: 0, Heads: 0, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: [], ONTURN: [], STAT: { str: 0, con: 0, dex: -2, agi: -4, spd: -4, per: 0, int: 0, wis: 0, cha: 0, wpr: 0 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 0, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 0, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 0, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'Supine' });
     this.ts.push({ BODY: { Size: 0, Arms: 0, Legs: 0, Wings: 0, Heads: 0, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: [], ONTURN: [], STAT: { str: 0, con: 0, dex: 0, agi: -1, spd: 0, per: 0, int: 0, wis: 0, cha: 0, wpr: 0 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 0, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 0, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 0, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'Unbalanced' });
-    this.tss.push({ BODY: { Size: 0, Arms: 0, Legs: 0, Wings: 0, Heads: 0, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: [], ONTURN: [], STAT: { str: 0, con: 0, dex: 0, agi: 0, spd: 0, per: 0, int: 0, wis: 0, cha: 0, wpr: 0 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 0, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 0, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 0, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'Nocked' });
     this.z.push({ BODY: { Size: 0, Arms: 0, Legs: 0, Wings: 0, Heads: 0, Tails: 0, Teeth: 0, Claws: 0 }, IMMUNES: [], ONSLEEP: [], ONTURN: [], STAT: { str: 3, con: 3, dex: 3, agi: 3, spd: 3, per: 3, int: 3, wis: 3, cha: 3, wpr: 3 }, ELMT: { magic: 0, fire: 0, water: 0, rock: 0, air: 0, lightning: 0, cold: 0, heat: 0, nature: 0, toxic: 0, decay: 0, corrosive: 0, caustic: 0, holy: 0, profane: 0, light: 0, dark: 0 }, TRNG: { fighting: 0, athletics: 0, crafting: 0, nature: 0, healing: 0, diplomacy: 0, scholarship: 0, performing: 0, subterfuge: 0 }, GEAR: { length: 0, mass: 0, edge: 0, point: 0, spike: 0, percussion: 0, elegance: 0, haft: 0, guard: 0, hook: 0, cord: 0, limb: 0, barrel: 0, armour: 0 }, name: 'null' });
   }
 }
@@ -259,7 +258,7 @@ export function getZeroStats() {
   return allStats.z[1];
 }
 
-export function getStats(a, b, c, d, e, f, g, tib, tibb, tim, timm) {
+export function getStats(a, b, c, d, e, f, g, tib, tibb, tim, timm, ts) {
   let allStats = new AllStats();
   let statsOut = allStats.z[0];
 
@@ -320,6 +319,11 @@ export function getStats(a, b, c, d, e, f, g, tib, tibb, tim, timm) {
     Object.keys(timm[i].TRNG).map((key) => (statsOut.TRNG[key] += timm[i].TRNG[key]));
   }
 
+  Object.keys(allStats.ts[ts].STAT).map((key) => (statsOut.STAT[key] += allStats.ts[ts].STAT[key]));
+  Object.keys(allStats.ts[ts].ELMT).map((key) => (statsOut.ELMT[key] += allStats.ts[ts].ELMT[key]));
+  Object.keys(allStats.ts[ts].TRNG).map((key) => (statsOut.TRNG[key] += allStats.ts[ts].TRNG[key]));
+  Object.keys(allStats.ts[ts].BODY).map((key) => (statsOut.BODY[key] += allStats.ts[ts].BODY[key]));
+
   let totalMass = 0;
   for (let i = 0; i < g.length; i++) {
     Object.keys(g[i].STAT).map((key) => (statsOut.STAT[key] += g[i].STAT[key]));
@@ -327,6 +331,7 @@ export function getStats(a, b, c, d, e, f, g, tib, tibb, tim, timm) {
     Object.keys(g[i].TRNG).map((key) => (statsOut.TRNG[key] += g[i].TRNG[key]));
     totalMass = totalMass + g[i].GEAR.mass;
   }
+
 
   if (totalMass > statsOut.STAT.str) { statsOut.STAT.spd = statsOut.STAT.spd + statsOut.STAT.str - totalMass }
   return statsOut;
@@ -359,7 +364,7 @@ export function getSecondaryStats(statblock, gear) {
     statblock.STAT.wis,
     statblock.STAT.cha,
     statblock.STAT.wpr,
-     ) ;
+  );
 
   let strik = Math.max(0, statblock.STAT.con) + Math.max(0, statblock.STAT.agi) + Math.max(0, statblock.STAT.wis) + gearArmour;
   let affli = Math.max(0, statblock.STAT.str) + Math.max(0, statblock.STAT.con) + Math.max(0, statblock.STAT.agi) + gearArmour;
@@ -389,10 +394,87 @@ export function getStatInteraction(stat1, stat2) {
   return Math.max(0, Math.max(0, stat1) + Math.max(0, stat2 * 2) - 2);
 }
 
+export function getAbilities(statblock) {
+
+  let abilities = {
+    grappling: getStatInteraction(statblock.STAT.str, statblock.TRNG.fighting),
+    protecting: getStatInteraction(statblock.STAT.con, statblock.TRNG.fighting),
+    fencing: getStatInteraction(statblock.STAT.dex, statblock.TRNG.fighting),
+    unarmed: getStatInteraction(statblock.STAT.agi, statblock.TRNG.fighting),
+    charge: getStatInteraction(statblock.STAT.spd, statblock.TRNG.fighting),
+    projectile: getStatInteraction(statblock.STAT.per, statblock.TRNG.fighting),
+    tactics: getStatInteraction(statblock.STAT.int, statblock.TRNG.fighting),
+    focus: getStatInteraction(statblock.STAT.wis, statblock.TRNG.fighting),
+    flourish: getStatInteraction(statblock.STAT.cha, statblock.TRNG.fighting),
+    construction: getStatInteraction(statblock.STAT.str, statblock.TRNG.crafting),
+    alchemy: getStatInteraction(statblock.STAT.con, statblock.TRNG.crafting),
+    smithing: getStatInteraction(statblock.STAT.dex, statblock.TRNG.crafting),
+    jewellry: getStatInteraction(statblock.STAT.per, statblock.TRNG.crafting),
+    clockwork: getStatInteraction(statblock.STAT.int, statblock.TRNG.crafting),
+    tailoring: getStatInteraction(statblock.STAT.wis, statblock.TRNG.crafting),
+    cookery: getStatInteraction(statblock.STAT.cha, statblock.TRNG.crafting),
+    dance: getStatInteraction(statblock.STAT.agi, statblock.TRNG.performing),
+    painting: getStatInteraction(statblock.STAT.per, statblock.TRNG.performing),
+    comedy: getStatInteraction(statblock.STAT.int, statblock.TRNG.performing),
+    poetry: getStatInteraction(statblock.STAT.wis, statblock.TRNG.performing),
+    music: getStatInteraction(statblock.STAT.cha, statblock.TRNG.performing),
+    calligraphy: getStatInteraction(statblock.STAT.dex, statblock.TRNG.scholarship),
+    astronomy: getStatInteraction(statblock.STAT.per, statblock.TRNG.scholarship),
+    numeracy: getStatInteraction(statblock.STAT.int, statblock.TRNG.scholarship),
+    history: getStatInteraction(statblock.STAT.wis, statblock.TRNG.scholarship),
+    literature: getStatInteraction(statblock.STAT.cha, statblock.TRNG.scholarship),
+    lifting: getStatInteraction(statblock.STAT.str, statblock.TRNG.athletics),
+    swimming: getStatInteraction(statblock.STAT.con, statblock.TRNG.athletics),
+    climbing: getStatInteraction(statblock.STAT.dex, statblock.TRNG.athletics),
+    acrobatics: getStatInteraction(statblock.STAT.agi, statblock.TRNG.athletics),
+    sprinting: getStatInteraction(statblock.STAT.spd, statblock.TRNG.athletics),
+    tavern_games: getStatInteraction(statblock.STAT.per, statblock.TRNG.athletics),
+    table_games: getStatInteraction(statblock.STAT.int, statblock.TRNG.athletics),
+    tracking: getStatInteraction(statblock.STAT.per, statblock.TRNG.nature),
+    anatomy: getStatInteraction(statblock.STAT.int, statblock.TRNG.nature),
+    botany: getStatInteraction(statblock.STAT.wis, statblock.TRNG.nature),
+    husbandry: getStatInteraction(statblock.STAT.cha, statblock.TRNG.nature),
+    apothecary: getStatInteraction(statblock.STAT.con, statblock.TRNG.healing),
+    surgery: getStatInteraction(statblock.STAT.dex, statblock.TRNG.healing),
+    diagnosis: getStatInteraction(statblock.STAT.int, statblock.TRNG.healing),
+    shrinkery: getStatInteraction(statblock.STAT.wis, statblock.TRNG.healing),
+    sleight: getStatInteraction(statblock.STAT.dex, statblock.TRNG.subterfuge),
+    stealth: getStatInteraction(statblock.STAT.agi, statblock.TRNG.subterfuge),
+    inspecting: getStatInteraction(statblock.STAT.per, statblock.TRNG.subterfuge),
+    encryption: getStatInteraction(statblock.STAT.int, statblock.TRNG.subterfuge),
+    deception: getStatInteraction(statblock.STAT.wis, statblock.TRNG.subterfuge),
+    misdirection: getStatInteraction(statblock.STAT.cha, statblock.TRNG.subterfuge),
+    intimidation: getStatInteraction(statblock.STAT.str, statblock.TRNG.diplomacy),
+    coercion: getStatInteraction(statblock.STAT.int, statblock.TRNG.diplomacy),
+    negotiation: getStatInteraction(statblock.STAT.wis, statblock.TRNG.diplomacy),
+    persuasion: getStatInteraction(statblock.STAT.cha, statblock.TRNG.diplomacy),
+    magic: statblock.ELMT.magic,
+    fire: statblock.ELMT.fire,
+    water: statblock.ELMT.water,
+    rock: statblock.ELMT.rock,
+    air: statblock.ELMT.air,
+    lightning: statblock.ELMT.lightning,
+    cold: statblock.ELMT.cold,
+    heat: statblock.ELMT.heat,
+    nature: statblock.ELMT.nature,
+    toxic: statblock.ELMT.toxic,
+    decay: statblock.ELMT.decay,
+    corrosive: statblock.ELMT.corrosive,
+    caustic: statblock.ELMT.caustic,
+    holy: statblock.ELMT.holy,
+    profane: statblock.ELMT.profane,
+    light: statblock.ELMT.light,
+    dark: statblock.ELMT.dark,
+  }
+  return abilities
+}
+
+
 export class AllTechniques {
   t = [];
 
   constructor() {
+    this.t.push({ name: "Advanced Tech", tags: [], defense: '', targetSize: '', ap: 1000, skills: [{ shrinkery: 2 }], traits: [], range: "audible", targets: 1, succTarg: ["Heal Mind Minor"], failTarg: [], succSelf: ["Heal Mind Minor"], failSelf: [], });
     this.t.push({ name: "Talk it out", tags: [], defense: '', targetSize: '', ap: 1000, skills: [{ shrinkery: 0 }], traits: [], range: "audible", targets: 1, succTarg: ["Heal Mind Minor"], failTarg: [], succSelf: ["Heal Mind Minor"], failSelf: [], });
     this.t.push({ name: "Bash", tags: ["Attack"], defense: "strike", targetSize: "+-1", ap: 2, skills: [{ fencing: 0 }], traits: [{ percussion: 1 }], range: 0, targets: 1, succTarg: ["Blunt Trauma"], failTarg: [], succSelf: [], failSelf: ["Unbalanced"], });
     this.t.push({ name: "Hack", tags: ["Attack"], defense: "strike", targetSize: "+-1", ap: 2, skills: [{ fencing: 1 }], traits: [{ edge: 1 }, { percussion: 2 }], range: 0, targets: 1, succTarg: ["Lacerated", "Blunt Trauma"], failTarg: [], succSelf: [], failSelf: ["Stagger"], });
@@ -419,6 +501,6 @@ export class AllTechniques {
     this.t.push({ name: "Cross", tags: ["Attack"], defense: "strike", targetSize: "+-1", ap: 1, skills: [{ unarmed: 3 }, { focus: 2 }], traits: [], range: 0, targets: 1, succTarg: ["Stagger"], failTarg: [], succSelf: [], failSelf: [], });
     this.t.push({ name: "Hook", tags: ["Attack"], defense: "strike", targetSize: "+-1", ap: 2, skills: [{ unarmed: 3 }, { focus: 3 }], traits: [], range: 0, targets: 1, succTarg: ["Stagger", "Exerted"], failTarg: [], succSelf: [], failSelf: [], });
     this.t.push({ name: "Uppercut", tags: ["Attack"], defense: "strike", targetSize: "+-1", ap: 2, skills: [{ unarmed: 3 }, { focus: 3 }], traits: [], range: 0, targets: 1, succTarg: ["Blunt Trauma", "Exerted"], failTarg: [], succSelf: [], failSelf: [], });
-    this.t.push({ name: "Get Up", tags: ["Attack"], defense: '', targetSize: '', ap: 3, skills: [{ acrobatics: 0 }], traits: [], range: "self", targets: "self", succTarg: [], failTarg: [], succSelf: [], failSelf: [], });
+    this.t.push({ name: "Get Up", tags: ["Attack"], defense: '', targetSize: '', ap: 3, skills: [{ acrobatics: 0 }], traits: [], range: "self", targets: "self", succTarg: [], failTarg: [], succSelf: ["Upright Stance"], failSelf: [], });
   }
 }
