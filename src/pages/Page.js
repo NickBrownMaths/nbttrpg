@@ -2,6 +2,7 @@ import CharacterCreation from "./CharacterCreation";
 import CharacterSave from "./CharacterSave";
 import CharacterLoad from "./CharacterLoad";
 import Play from "./Play";
+import Glossary from "./Glossary";
 
 function Page(props) {
   if (props.currentPage === 'CC') {
@@ -69,6 +70,11 @@ function Page(props) {
       injuryMM={props.injuryMM} setAddInjuryMM={props.setAddInjuryMM} setDelInjuryMM={props.setDelInjuryMM}
       stance={props.stance} setStance={props.setStance} setDelStance={props.setDelStance} stanceData={props.stanceData}
     />
+  }
+  else if (props.currentPage === 'GG') {
+    return (
+      <Glossary statblock={props.statblock}/>
+    )
   }
 }
 export default Page;

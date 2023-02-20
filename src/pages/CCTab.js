@@ -85,13 +85,6 @@ function CCTab(props) {
       </div>
     )
   }
-  else if (props.currentTab === 'AG') {
-    return (
-      <div className="GridHolder">
-        <InteractionGrid statblock={props.statblock} />
-      </div>
-    )
-  }
   else if (props.currentTab === 'LU') {
     return <LevelUp
       statblock={props.statblock}

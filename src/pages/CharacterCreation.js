@@ -22,7 +22,6 @@ function CharacterCreation(props) {
   buttons.push([() => {setShowSearchBar(true) ; setCurrentTab('F')}, 'Flaw ' + props.charChoices[5],]);
   buttons.push([() => {setShowSearchBar(true) ; setCurrentTab('G')}, 'Gear',]);
   buttons.push([() => {setShowSearchBar(false) ; setCurrentTab('LU')}, 'Level Up',]);
-  buttons.push([() => {setShowSearchBar(false) ; setCurrentTab('AG')}, 'Ability Grid',]);
 
   return (
     <div>
