@@ -39,12 +39,12 @@ function StatCard(props) {
           }
           {
             Object.keys(props.statblock.ONSLEEP).map((objKey, index) => (
-              <Statbox key={index} stat={props.statblock.ONSLEEP[objKey]} statlabel={''} statType='ONSLEEP' isBig={props.isBig} hideNeg={props.hideNeg} />
+              <Statbox key={index} stat={''} statlabel={props.statblock.ONSLEEP[objKey]} statType='ONSLEEP' isBig={props.isBig} hideNeg={props.hideNeg} />
             ))
           }
           {
             Object.keys(props.statblock.ONTURN).map((objKey, index) => (
-              <Statbox key={index} stat={props.statblock.ONTURN[objKey]} statlabel={''} statType='ONTURN' isBig={props.isBig} hideNeg={props.hideNeg} />
+              <Statbox key={index} stat={''} statlabel={props.statblock.ONTURN[objKey]} statType='ONTURN' isBig={props.isBig} hideNeg={props.hideNeg} />
             ))
           }
         </div>

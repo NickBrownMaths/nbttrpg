@@ -165,7 +165,7 @@ function App() {
 
   return (
     <div className="SubDivsInCol">
-      <NavBar buttons={buttons} />
+      <NavBar buttons={buttons} buttonType='NavButton'/>
       <Page
         currentPage={currentPage}
 

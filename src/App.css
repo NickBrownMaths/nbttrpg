@@ -218,7 +218,8 @@ body {
   margin: 5px
 }
 
-.NavButton {
+.NavButton,
+.SmallNavButton {
   font-family: var(--fontFont);
   font-size: large;
   background-color: var(--colourLight);
@@ -231,6 +232,13 @@ body {
   max-width: 130px;
   min-height: 50px;
   max-height: 50px;
+}
+
+.SmallNavButton {
+  min-width: 100px;
+  max-width: 100px;
+  min-height: 30px;
+  max-height: 30px;
 }
 
 .NavButton:hover,

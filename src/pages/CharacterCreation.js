@@ -41,7 +41,7 @@ function CharacterCreation(props) {
           hideNeg={true}
         />
       </div>
-      <NavBar buttons={buttons} />
+      <NavBar buttons={buttons} buttonType='NavButton'/>
       <SearchForm setSearchTerm={setSearchTerm} appear={showSearchBar}/>
       <CCTab
         currentTab={currentTab}

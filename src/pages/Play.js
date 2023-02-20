@@ -7,13 +7,11 @@ import SearchForm from "../components/SearchForm";
 import StatCard from "../components/StatCard";
 import TechCard from "../components/TechCard";
 import NavBar from "../components/NavBar";
-
-let buttons = [];
-  buttons.push([() => console.log('GG'), 'Gear',]);
-  buttons.push([() => console.log('CC'), 'Effects',]);
-  buttons.push([() => console.log('CL'), 'Full Stats',]);
+import PlayTab from "../components/PlayTab";
 
 function Play(props) {
+
+const [currentTab, setCurrentTab] = useState('GG')
 
   const [searchTermI, setSearchTermI] = useState('');
   const [searchTermT, setSearchTermT] = useState('');
@@ -26,6 +24,12 @@ function Play(props) {
     setCharAbilities(getAbilities(props.statblock))
   }, [props.statblock]);
 
+
+  let buttons = [];
+  buttons.push([() => setCurrentTab('GG'), 'Gear',]);
+  buttons.push([() => setCurrentTab('EF'), 'Effects',]);
+  buttons.push([() => setCurrentTab('ST'), 'Stats',]);
+
   return (
     <div className="SubDivsInRow" >
       <div className="SubDivsInCol SubDivsAtTop">
@@ -36,37 +40,25 @@ function Play(props) {
           level={props.level}
           hideNeg={true}
         />
-        <NavBar buttons={buttons}/>
-        <ClickBar
-          input={props.gear}
-          onClick={props.setDelGear}
-          cardWidth='Card'
+        <NavBar buttons={buttons} buttonType='SmallNavButton' />
+        <PlayTab 
+          gear={props.gear}
+          onClickGear={props.setDelGear}
+          iB={props.injuryB}
+          onClickIB={props.setDelInjuryB}
+          iBB={props.injuryBB}
+          onClickIBB={props.setDelInjuryBB}
+          iM={props.injuryM}
+          onClickIM={props.setDelInjuryM}
+          iMM={props.injuryMM}
+          onClickIMM={props.setDelInjuryMM}
+          inputS={[props.stanceData]}
+          onClickS={props.setDelStance}
+          currentTab={currentTab}
+          charAbilities={charAbilities}
+          statblock={props.statblock}
         />
-        <ClickBar
-          input={props.injuryB}
-          onClick={props.setDelInjuryB}
-          cardWidth='Card'
-        />
-        <ClickBar
-          input={props.injuryBB}
-          onClick={props.setDelInjuryBB}
-          cardWidth='Card'
-        />
-        <ClickBar
-          input={props.injuryM}
-          onClick={props.setDelInjuryM}
-          cardWidth='Card'
-        />
-        <ClickBar
-          input={props.injuryMM}
-          onClick={props.setDelInjuryMM}
-          cardWidth='Card'
-        />
-        <ClickBar
-          input={[props.stanceData]}
-          onClick={props.setDelStance}
-          cardWidth='Card'
-        />
+        
       </div>
       <div className="Card GEAR">
         <SearchForm setSearchTerm={setSearchTermI} appear={true} />
@@ -100,7 +92,7 @@ function Play(props) {
         <SearchForm setSearchTerm={setSearchTermT} appear={true} />
         {
           allTechs.t.map((t, index) => (
-            <TechCard key={index} index={index} name={t.name} t={t} searchTerm={searchTermT} userGear={props.gear} userAbl={charAbilities} userStat={[props.statblock, props.secondStat, props.gear]}/>
+            <TechCard key={index} index={index} name={t.name} t={t} searchTerm={searchTermT} userGear={props.gear} userAbl={charAbilities} userStat={[props.statblock, props.secondStat, props.gear]} />
           ))
         }
       </div>
