@@ -24,23 +24,8 @@ function PlayTab(props) {
           cardWidth='Card'
         />
         <ClickBar
-          input={props.iBB}
-          onClick={props.onClickIBB}
-          cardWidth='Card'
-        />
-        <ClickBar
-          input={props.iM}
-          onClick={props.onClickIM}
-          cardWidth='Card'
-        />
-        <ClickBar
-          input={props.iMM}
-          onClick={props.setIMM}
-          cardWidth='Card'
-        />
-        <ClickBar
           input={props.inputS}
-          onClick={props.setDelStance}
+          onClick={() => {}}
           cardWidth='Card'
         />
       </div>

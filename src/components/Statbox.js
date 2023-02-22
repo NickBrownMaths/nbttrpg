@@ -22,7 +22,7 @@ function Statbox(props) {
       else { label = props.statlabel + '(' + props.stat + ')'}
       return (
         <div className={'Statbox ' + props.statType} >
-          <div className='StatLabel' >{label}</div>
+          <div className='SmallStatLabel' >{label}</div>
         </div>
       )
     }

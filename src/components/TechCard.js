@@ -7,6 +7,9 @@ function TechCard(props) {
   let skillsBonus = [];
   let gearBonus = 0;
   let activeGear = ''
+
+  console.log(props.t)
+
   if (props.searchTerm === '' || props.name.toLowerCase().includes(props.searchTerm.toLowerCase())) { displayMe = true; }
   if (props.t.fh > props.userStat[1].BODY.hands) { displayMe = false; }
   if (displayMe === true) {

@@ -44,14 +44,8 @@ const [currentTab, setCurrentTab] = useState('GG')
         <PlayTab 
           gear={props.gear}
           onClickGear={props.setDelGear}
-          iB={props.injuryB}
-          onClickIB={props.setDelInjuryB}
-          iBB={props.injuryBB}
-          onClickIBB={props.setDelInjuryBB}
-          iM={props.injuryM}
-          onClickIM={props.setDelInjuryM}
-          iMM={props.injuryMM}
-          onClickIMM={props.setDelInjuryMM}
+          iB={props.injury}
+          onClickIB={props.setDelInjury}
           inputS={[props.stanceData]}
           onClickS={props.setDelStance}
           currentTab={currentTab}
@@ -63,23 +57,8 @@ const [currentTab, setCurrentTab] = useState('GG')
       <div className="Card GEAR">
         <SearchForm setSearchTerm={setSearchTermI} appear={true} />
         {
-          allstats.tib.map((tib, index) => (
-            <StatCard key={index} index={index} name={tib.name} userStat={[props.statblock, props.secondStat, props.gear]} statblock={tib} onClick={props.setAddInjuryB} searchTerm={searchTermI} isBig={false} hideNeg={false} />
-          ))
-        }
-        {
-          allstats.tibb.map((tibb, index) => (
-            <StatCard key={index} index={index} name={tibb.name} userStat={[props.statblock, props.secondStat, props.gear]} statblock={tibb} onClick={props.setAddInjuryBB} searchTerm={searchTermI} isBig={false} hideNeg={false} />
-          ))
-        }
-        {
-          allstats.tim.map((tim, index) => (
-            <StatCard key={index} index={index} name={tim.name} userStat={[props.statblock, props.secondStat, props.gear]} statblock={tim} onClick={props.setAddInjuryM} searchTerm={searchTermI} isBig={false} hideNeg={false} />
-          ))
-        }
-        {
-          allstats.timm.map((timm, index) => (
-            <StatCard key={index} index={index} name={timm.name} userStat={[props.statblock, props.secondStat, props.gear]} statblock={timm} onClick={props.setAddInjuryMM} searchTerm={searchTermI} isBig={false} hideNeg={false} />
+          allstats.ib.map((ib, index) => (
+            <StatCard key={index} index={index} name={ib.name} userStat={[props.statblock, props.secondStat, props.gear]} statblock={ib} onClick={props.setAddInjury} searchTerm={searchTermI} isBig={false} hideNeg={false} />
           ))
         }
         {

@@ -153,6 +153,9 @@ body {
   font-size: small;
 }
 
+.SmallStatLabel{
+  font-size: smaller;
+}
 .BODY {
   background-color: var(--colourOrange);
 }
@@ -302,7 +305,7 @@ body {
   display: grid;
   column-gap: 5px;
   row-gap: 5px;
-  grid-template-columns: 95px 95px 95px 95px 95px 95px 95px 95px 95px 95px 95px;
+  grid-template-columns: 96px 96px 96px 96px 96px 96px 96px 96px 96px 96px 96px;
 
   padding: 5px;
 

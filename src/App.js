@@ -21,34 +21,25 @@ function App() {
   const [addGear, setAddGear] = useState(null);
   const [delGear, setDelGear] = useState(null);
 
-  const [injuryB, setInjuryB] = useState([]);
-  const [addInjuryB, setAddInjuryB] = useState(null);
-  const [delInjuryB, setDelInjuryB] = useState(null);
-  const [injuryBB, setInjuryBB] = useState([]);
-  const [addInjuryBB, setAddInjuryBB] = useState(null);
-  const [delInjuryBB, setDelInjuryBB] = useState(null);
-  const [injuryM, setInjuryM] = useState([]);
-  const [addInjuryM, setAddInjuryM] = useState(null);
-  const [delInjuryM, setDelInjuryM] = useState(null);
-  const [injuryMM, setInjuryMM] = useState([]);
-  const [addInjuryMM, setAddInjuryMM] = useState(null);
-  const [delInjuryMM, setDelInjuryMM] = useState(null);
+  const [injury, setInjury] = useState([]);
+  const [addInjury, setAddInjury] = useState(null);
+  const [delInjury, setDelInjury] = useState(null);
 
   const [stance, setStance] = useState(0);
   const [delStance, setDelStance] = useState(null);
 
   const [name, setName] = useState('Adventurer');
   const [level, setLevel] = useState(0);
-  const [statblock, setStatblock] = useState(getStats(0, 0, 0, 0, 0, 0, [], [], [], [], [], 0));
-  const [secondStat, setSecondStat] = useState(getSecondaryStats(getStats(0, 0, 0, 0, 0, 0, [], [], [], [], [], 0), []));
+  const [statblock, setStatblock] = useState(getStats(0, 0, 0, 0, 0, 0, [], [], 0));
+  const [secondStat, setSecondStat] = useState(getSecondaryStats(getStats(0, 0, 0, 0, 0, 0, [], [], 0), []));
   const [levelUpMessage, setLevelUpMessage] = useState({});
   const [dataMessage, setDataMessage] = useState(null);
 
   useEffect(() => {
-    setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw, gear, injuryB, injuryBB, injuryM, injuryMM, stance));
+    setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw, gear, injury, stance));
     setLevel(1);
     setCharChoices([allStats.a[ancestry].name, allStats.b[background].name, allStats.c[culture].name, allStats.d[dream].name, allStats.e[eccentricity].name, allStats.f[flaw].name]);
-  }, [ancestry, background, culture, dream, eccentricity, flaw, gear, injuryB, injuryBB, injuryM, injuryMM, stance]);
+  }, [ancestry, background, culture, dream, eccentricity, flaw, gear, injury, stance]);
 
   useEffect(() => {
     if (gear !== null) {
@@ -79,60 +70,27 @@ function App() {
       let newGear = gear;
       let removedGear = newGear.splice(delGear, 1);
       setGear(newGear);
-      setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw, newGear, injuryB, injuryBB, injuryM, injuryMM, stance));
+      setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw, newGear, injury, stance));
       setDelGear(null);
     }
   }, [delGear]);
 
   useEffect(() => {
-    if (addInjuryB !== null) {
-      setInjuryB([...injuryB, allStats.tib[addInjuryB]])
-      setAddInjuryB(null);
+    if (addInjury !== null) {
+      setInjury([...injury, allStats.ib[addInjury]])
+      setAddInjury(null);
     }
-    if (addInjuryBB !== null) {
-      setInjuryBB([...injuryBB, allStats.tibb[addInjuryBB]])
-      setAddInjuryBB(null);
-    }
-    if (addInjuryM !== null) {
-      setInjuryM([...injuryM, allStats.tim[addInjuryM]])
-      setAddInjuryM(null);
-    }
-    if (addInjuryMM !== null) {
-      setInjuryMM([...injuryMM, allStats.timm[addInjuryMM]])
-      setAddInjuryMM(null);
-    }
-  }, [addInjuryB, addInjuryBB, addInjuryM, addInjuryMM]);
+  }, [addInjury]);
 
   useEffect(() => {
-    if (delInjuryB !== null) {
-      let newInjuryB = injuryB;
-      let removedIB = newInjuryB.splice(delInjuryB, 1);
-      setInjuryB(newInjuryB);
-      setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw, gear, newInjuryB, injuryBB, injuryM, injuryMM, stance));
-      setDelInjuryB(null);
+    if (delInjury !== null) {
+      let newInjury = injury;
+      let removedIB = newInjury.splice(delInjury, 1);
+      setInjury(newInjury);
+      setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw, gear, newInjury, stance));
+      setDelInjury(null);
     }
-    if (delInjuryBB !== null) {
-      let newInjuryBB = injuryBB;
-      let removedIBB = newInjuryBB.splice(delInjuryBB, 1);
-      setInjuryBB(newInjuryBB);
-      setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw, gear, injuryB, newInjuryBB, injuryM, injuryMM, stance));
-      setDelInjuryBB(null);
-    }
-    if (delInjuryM !== null) {
-      let newInjuryM = injuryM;
-      let removedIM = newInjuryM.splice(delInjuryM, 1);
-      setInjuryM(newInjuryM);
-      setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw, gear, injuryB, injuryBB, newInjuryM, injuryMM, stance));
-      setDelInjuryM(null);
-    }
-    if (delInjuryMM !== null) {
-      let newInjuryMM = injuryMM;
-      let removedIMM = newInjuryMM.splice(delInjuryMM, 1);
-      setInjuryMM(newInjuryMM);
-      setStatblock(getStats(ancestry, background, culture, dream, eccentricity, flaw, gear, injuryB, injuryBB, injuryM, newInjuryMM, stance));
-      setDelInjuryMM(null);
-    }
-  }, [delInjuryB, delInjuryBB, delInjuryM, delInjuryMM]);
+  }, [delInjury]);
 
   useEffect(() => {
     setStatblock(incrementStat(statblock, levelUpMessage));
@@ -158,7 +116,7 @@ function App() {
 
   let buttons = [];
   buttons.push([() => setCurrentPage('GG'), 'Glossary',]);
-  buttons.push([() => setCurrentPage('CC'), 'Character Creation',]);
+  buttons.push([() => setCurrentPage('CC'), 'Character Editing',]);
   buttons.push([() => setCurrentPage('CL'), 'Character Load',]);
   buttons.push([() => setCurrentPage('CS'), 'Character Save',]);
   buttons.push([() => setCurrentPage('PP'), 'Play',]);
@@ -197,10 +155,7 @@ function App() {
         setAddGear={setAddGear}
         setDelGear={setDelGear}
 
-        injuryB={injuryB} setAddInjuryB={setAddInjuryB} setDelInjuryB={setDelInjuryB}
-        injuryBB={injuryBB} setAddInjuryBB={setAddInjuryBB} setDelInjuryBB={setDelInjuryBB}
-        injuryM={injuryM} setAddInjuryM={setAddInjuryM} setDelInjuryM={setDelInjuryM}
-        injuryMM={injuryMM} setAddInjuryMM={setAddInjuryMM} setDelInjuryMM={setDelInjuryMM}
+        injury={injury} setAddInjury={setAddInjury} setDelInjury={setDelInjury}
 
         stance={stance} setStance={setStance} setDelStance={setDelStance} stanceData={allStats.ts[stance]}
       />

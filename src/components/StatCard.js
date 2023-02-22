@@ -8,9 +8,13 @@ function StatCard(props) {
   if (props.searchTerm === '' || props.name.toLowerCase().includes(props.searchTerm.toLowerCase())) { displayMe = true; }
 
   if (displayMe) {
+
+    let LT = '';
+    if(props.statblock.INJBLES.length > 0) {if (props.statblock.INJBLES[0].includes('Long Term')) {LT = ' (LT)'}}
+
     return (
       <button className="NarrowCard ColourLight ColourMidHover" onClick={() => { props.onClick(props.index) }}>
-        <div className="NameBox"> {props.name} </div>
+        <div className="NameBox"> {props.name + LT} </div>
         <div className="Statbar">
           {
             Object.keys(props.statblock.BODY).map((objKey, index) => (

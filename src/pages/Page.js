@@ -64,10 +64,7 @@ function Page(props) {
       level={props.level}
       gear={props.gear}
       setDelGear={props.setDelGear}
-      injuryB={props.injuryB} setAddInjuryB={props.setAddInjuryB} setDelInjuryB={props.setDelInjuryB}
-      injuryBB={props.injuryBB} setAddInjuryBB={props.setAddInjuryBB} setDelInjuryBB={props.setDelInjuryBB}
-      injuryM={props.injuryM} setAddInjuryM={props.setAddInjuryM} setDelInjuryM={props.setDelInjuryM}
-      injuryMM={props.injuryMM} setAddInjuryMM={props.setAddInjuryMM} setDelInjuryMM={props.setDelInjuryMM}
+      injury={props.injury} setAddInjury={props.setAddInjury} setDelInjury={props.setDelInjury}
       stance={props.stance} setStance={props.setStance} setDelStance={props.setDelStance} stanceData={props.stanceData}
     />
   }
