@@ -8,9 +8,19 @@ function TechCard(props) {
   let gearBonus = 0;
   let activeGear = ''
 
-  console.log(props.t)
+  if (props.searchTermT === '' || props.name.toLowerCase().includes(props.searchTermT.toLowerCase())) { displayMe = true; }
 
-  if (props.searchTerm === '' || props.name.toLowerCase().includes(props.searchTerm.toLowerCase())) { displayMe = true; }
+
+  if (props.searchTermS !== '') {
+    displayMe = false;
+    for (let i = 0; i < props.t.skills.length; i++) {
+      if (Object.getOwnPropertyNames(props.t.skills[i])[0].toLowerCase().includes(props.searchTermS.toLowerCase())) { displayMe = true;}
+    }
+
+  }
+
+
+
   if (props.t.fh > props.userStat[1].BODY.hands) { displayMe = false; }
   if (displayMe === true) {
     if (props.t.skills.length > 0) {
@@ -116,13 +126,20 @@ function TechCard(props) {
         }
       }
     }
+
     let rangeText = '';
-    if (props.t.range !== '') {
-      rangeText = rangeText + 'Range: ' + props.t.range;
+    if (props.t.range.stat !== "") {
+      rangeText = rangeText + 'Range (' + props.t.range.num + ' x ' + props.t.range.stat + '): ' + (props.userStat[0].STAT[props.t.range.stat] * props.t.range.num) + '\'';
+    }
+    else if (props.t.range.num !== "") {
+      rangeText = rangeText + 'Range: ' + props.t.range.num + '\'';
     }
     let targetsText = '';
-    if (props.t.targets !== '') {
-      targetsText = targetsText + 'Targets: ' + props.t.targets;
+    if (props.t.targets.stat !== "") {
+      targetsText = targetsText + 'Targets (' + props.t.targets.num + ' x ' + props.t.targets.stat + '): ' + (props.userStat[0].STAT[props.t.targets.stat] * props.t.targets.num);
+    }
+    else if (props.t.targets.num !== "") {
+      targetsText = targetsText + 'Targets: ' + props.t.targets.num;
     }
     let succTargText = '';
     if (props.t.succTarg.length > 0) {

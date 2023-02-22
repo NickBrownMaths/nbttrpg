@@ -11,10 +11,11 @@ import PlayTab from "../components/PlayTab";
 
 function Play(props) {
 
-const [currentTab, setCurrentTab] = useState('GG')
+  const [currentTab, setCurrentTab] = useState('GG')
 
   const [searchTermI, setSearchTermI] = useState('');
   const [searchTermT, setSearchTermT] = useState('');
+  const [searchTermS, setSearchTermS] = useState('');
 
   const [allstats, setAllstats] = useState(new AllStats());
   const [allTechs, setAllTechs] = useState(new AllTechniques());
@@ -41,7 +42,7 @@ const [currentTab, setCurrentTab] = useState('GG')
           hideNeg={true}
         />
         <NavBar buttons={buttons} buttonType='SmallNavButton' />
-        <PlayTab 
+        <PlayTab
           gear={props.gear}
           onClickGear={props.setDelGear}
           iB={props.injury}
@@ -52,10 +53,10 @@ const [currentTab, setCurrentTab] = useState('GG')
           charAbilities={charAbilities}
           statblock={props.statblock}
         />
-        
+
       </div>
       <div className="Card GEAR">
-        <SearchForm setSearchTerm={setSearchTermI} appear={true} />
+        <SearchForm setSearchTerm={setSearchTermI} appear={true} placeholder={'search effects'}/>
         {
           allstats.ib.map((ib, index) => (
             <StatCard key={index} index={index} name={ib.name} userStat={[props.statblock, props.secondStat, props.gear]} statblock={ib} onClick={props.setAddInjury} searchTerm={searchTermI} isBig={false} hideNeg={false} />
@@ -68,10 +69,13 @@ const [currentTab, setCurrentTab] = useState('GG')
         }
       </div>
       <div className="Card GEAR MediumWideCard">
-        <SearchForm setSearchTerm={setSearchTermT} appear={true} />
+        <div className="SubDivsInRow">
+          <SearchForm setSearchTerm={setSearchTermT} appear={true} placeholder={'search name'}/>
+          <SearchForm setSearchTerm={setSearchTermS} appear={true} placeholder={'search ability'}/>
+        </div>
         {
           allTechs.t.map((t, index) => (
-            <TechCard key={index} index={index} name={t.name} t={t} searchTerm={searchTermT} userGear={props.gear} userAbl={charAbilities} userStat={[props.statblock, props.secondStat, props.gear]} />
+            <TechCard key={index} index={index} name={t.name} t={t} searchTermT={searchTermT} searchTermS={searchTermS} userGear={props.gear} userAbl={charAbilities} userStat={[props.statblock, props.secondStat, props.gear]} />
           ))
         }
       </div>

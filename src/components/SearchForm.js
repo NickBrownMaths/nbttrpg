@@ -7,7 +7,7 @@ function SearchForm(props) {
   if (props.appear) {
     return (
       <form className='SearchForm' onChange={handleSubmit((data) => { props.setSearchTerm(data.search) })}>
-        <input {...register('search')} placeholder='Search' className='SearchInput' />
+        <input {...register('search')} placeholder={props.placeholder} className='SearchInput' />
       </form>
     )
   }
