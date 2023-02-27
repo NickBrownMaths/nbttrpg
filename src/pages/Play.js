@@ -12,6 +12,7 @@ import PlayTab from "../components/PlayTab";
 function Play(props) {
 
   const [currentTab, setCurrentTab] = useState('GG')
+  const [currentTechTab, setCurrentTechTab] = useState('C')
 
   const [searchTermI, setSearchTermI] = useState('');
   const [searchTermT, setSearchTermT] = useState('');
@@ -30,7 +31,7 @@ function Play(props) {
   buttons.push([() => setCurrentTab('GG'), 'Gear',]);
   buttons.push([() => setCurrentTab('EF'), 'Effects',]);
   buttons.push([() => setCurrentTab('ST'), 'Stats',]);
-
+  
   return (
     <div className="SubDivsInRow" >
       <div className="SubDivsInCol SubDivsAtTop">

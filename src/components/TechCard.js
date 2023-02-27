@@ -14,7 +14,7 @@ function TechCard(props) {
   if (props.searchTermS !== '') {
     displayMe = false;
     for (let i = 0; i < props.t.skills.length; i++) {
-      if (Object.getOwnPropertyNames(props.t.skills[i])[0].toLowerCase().includes(props.searchTermS.toLowerCase())) { displayMe = true;}
+      if (Object.getOwnPropertyNames(props.t.skills[i])[0].toLowerCase().includes(props.searchTermS.toLowerCase())) { displayMe = true; }
     }
 
   }
@@ -69,8 +69,15 @@ function TechCard(props) {
     }
   }
 
-
-
+  if (props.t.tags.length > 0 && props.searchTermT === '' && props.searchTermS === '') {
+    for (let i = 0; i < props.t.tags.length; i++) {
+      if (props.t.tags[i] === 'Consumable') { displayMe = false; }
+      else if (props.t.tags[i] === 'Laboratory') { displayMe = false; }
+      else if (props.t.tags[i] === 'Workshop') { displayMe = false; }
+      else if (props.t.tags[i] === 'Materials') { displayMe = false; }
+      else if (props.t.tags[i] === 'Safety') { displayMe = false; }
+    }
+  }
 
   if (displayMe) {
 
@@ -179,7 +186,7 @@ function TechCard(props) {
       for (let i = 0; i < props.t.skills.length; i++) {
         if (skillsBonus[i] + gearBonus < bonus) { bonus = skillsBonus[i] + gearBonus; }
       }
-      rollsText = rollsText + "D20+" + bonus + " vs " + props.t.defense + " defense";
+      rollsText = rollsText + "D20+" + bonus + " vs " + props.t.defense ;
     }
     if (bonus === 10000000) { bonus = 0; }
 
